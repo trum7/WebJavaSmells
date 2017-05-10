@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="1" hostname="PC" name="proyecto1.TestControllerSpec" tests="2" time="0.336" timestamp="2016-05-23T21:18:03">
+  <properties />
+  <testcase classname="proyecto1.TestControllerSpec" name="test something" time="0.006" />
+  <testcase classname="proyecto1.TestControllerSpec" name="testAnalisis" time="0.325">
+    <failure message="junit.framework.AssertionFailedError" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError
+	at proyecto1.TestControllerSpec.testAnalisis(TestControllerSpec.groovy:80)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from test something--
+--Output from testAnalisis--
+]]></system-out>
+  <system-err><![CDATA[--Output from test something--
+--Output from testAnalisis--
+]]></system-err>
+</testsuite>
