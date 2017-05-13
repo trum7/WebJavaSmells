@@ -7,9 +7,10 @@ import java.util.List;
 import proyecto1.Java8Parser.*;
 
 public class Visitor<T> extends Java8BaseVisitor<T>{
-	
+	int pot = 0;
 	public HashMap<String,Integer> lexemes = new HashMap<String,Integer>();
 	public HashMap<String,Integer> attributes = new HashMap<String,Integer>();
+	public HashMap<String,Integer> primitiveAttributes = new HashMap<String,Integer>();
 	public HashMap<String,Integer> classes = new HashMap<String,Integer>();
 	public HashMap<String,MethodInfo> methods = new HashMap<String,MethodInfo>();
 
@@ -44,7 +45,7 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 		if (!classes.containsKey(name)){
 			classes.put(name, classlong);
 		}
-		System.out.println(classes.keySet().toString());
+//		System.out.println(classes.keySet().toString());
 		return null;
 	}
 
@@ -54,7 +55,7 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 		
 		List<ClassBodyDeclarationContext> bodyDecl = ctx.classBodyDeclaration();
 		int classLong = ctx.getStop().getLine()-ctx.getStart().getLine()-1;
-		System.out.printf("Longitud Clase: %d \n",classLong );
+//		System.out.printf("Longitud Clase: %d \n",classLong );
 		for(ClassBodyDeclarationContext bd: bodyDecl){
 			visitClassBodyDeclaration(bd);
 		}
@@ -78,14 +79,18 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	public T visitFieldDeclaration(FieldDeclarationContext ctx) {
 		boolean noPrimitive = Boolean.parseBoolean( visitUnannType(ctx.unannType()).toString());
 		ArrayList ids = (ArrayList) visitVariableDeclaratorList(ctx.variableDeclaratorList());
-		if (noPrimitive){
-			for(int var= 0; var< ids.size(); var++){
-				Tuple tuple = (Tuple) ids.get(var);
-				System.out.println("ES AQUI");
+		
+		for(int var= 0; var< ids.size(); var++){
+			Tuple tuple = (Tuple) ids.get(var);
+			if (noPrimitive){
 				this.attributes.put((String)tuple.t, (Integer)tuple.v);
-				System.out.println((String) tuple.t);
-			}		
+			}else{
+				this.primitiveAttributes.put((String)tuple.t, (Integer)tuple.v);
+			}
+//			System.out.println("ATTRIBUTES");
+//			System.out.println((String) tuple.t);
 		}		
+				
 		return null;
 	}
 	@Override
@@ -142,14 +147,17 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	//-------------------- METHOD DECLARATION 
 	@Override
 	public T visitMethodDeclaration(MethodDeclarationContext ctx) {
-
+//		System.out.println("---------------------------------------------------");
+//		System.out.println("Entre a declaracion metodos");
 		int totalLines = Integer.parseInt(visitMethodBody(ctx.methodBody()).toString());
 		MethodInfo mi = (MethodInfo) visitMethodHeader(ctx.methodHeader());
+//		System.out.println("Nombre metodo "+mi.name);
 		mi.length = totalLines;
 		if(!methods.containsKey(mi.name)){
-			methods.put(mi.name, mi);
+			this.methods.put(mi.name, mi);
 		}
-		
+//		System.out.println("---------------------------------------------------");
+
 		return null;
 	}
 	
@@ -158,7 +166,7 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 		
 		int tmp = ctx.getStop().getLine() - ctx.getStart().getLine();
 		int TotalLines =(ctx.block().blockStatements()!= null) ? tmp: 1;
-		System.out.printf("Lineas totales en el metodo %d \n",TotalLines-1);
+//		System.out.printf("Lineas totales en el metodo %d \n",TotalLines-1);
 		visitBlock(ctx.block());
 		return (T)(Integer) TotalLines;
 	}
@@ -177,12 +185,11 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 		if(ctx.formalParameterList()!=null){
 			numParams = Integer.parseInt(visitFormalParameterList(ctx.formalParameterList()).toString());
 			mi.paramNum = numParams;
-			System.out.printf("Cantidad de params %d \n",numParams);
+//			System.out.printf("Cantidad de params %d \n",numParams);
 		}else{
 			mi.paramNum = numParams;
-			System.out.printf("Cantidad de params %d \n",numParams);	
+//			System.out.printf("Cantidad de params %d \n",numParams);	
 		}
-		
 		return (T) mi;
 	}
 	
@@ -253,13 +260,16 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	public T visitExpressionName(ExpressionNameContext ctx) {
 		String name = ctx.Identifier().getText();
 		if(attributes.containsKey(name)){
-			int count = attributes.get(name);
-			attributes.put(name, count+1);
-			
+			int count = this.attributes.get(name);
+			this.attributes.put(name, count+1);
+			System.out.println("NAME 1 " + name);
+			System.out.println(this.attributes.get(name));
+		}else if(primitiveAttributes.containsKey(name)){
+			int count = primitiveAttributes.get(name);
+			this.primitiveAttributes.put(name, count+1);
+			System.out.println("NAME 2 " + name);
+			System.out.println(this.attributes.get(name));
 		}
-		
-		System.out.println("name1 " + name);
-		System.out.println(attributes.get(name));
 		return null;
 	}
 	@Override
@@ -268,11 +278,69 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 		
 		if(attributes.containsKey(name)){
 			int count = attributes.get(name);
-			attributes.put(name, count++);
+			attributes.put(name, count+1);
+		}else if(primitiveAttributes.containsKey(name)){
+			int count = primitiveAttributes.get(name);
+			primitiveAttributes.put(name, count+1);
 		}
-		System.out.println(attributes.get(name));
 		return null;
 	}
-
+	
+	@Override
+	public T visitMethodInvocation(MethodInvocationContext ctx) {
+		visitChildren(ctx);
+		return null ;
+	}
+	
+	@Override
+	public T visitMethodName(MethodNameContext ctx) {
+		String name = ctx.Identifier().getText();
+		if(methods.containsKey(name)){
+			MethodInfo mi = methods.get(name);
+			mi.count+=1;
+			this.methods.put(name, mi);	
+		}
+//		System.out.println(methods.toString());
+		return null;
+	}
+	
+	@Override
+	public T visitTypeName(TypeNameContext ctx) {
+		String name ="";
+		if(ctx.packageOrTypeName()!=null){
+			pot+=1;
+			System.out.printf("Numero de packages %d \n",pot);
+			name = (String) visitPackageOrTypeName(ctx.packageOrTypeName()); 
+		}else if(ctx.Identifier()!= null){
+			name = ctx.Identifier().getText();
+			checkExistence(name);
+		}
+		return (T) name;
+	}
+	
+	@Override
+	public T visitPackageOrTypeName(PackageOrTypeNameContext ctx) {
+		String name = "";
+		if(ctx.packageOrTypeName()!=null){
+			pot+=1;
+			System.out.printf("Numero de packages %d \n",pot);
+			name = (String) visitPackageOrTypeName(ctx.packageOrTypeName()); 
+		}else if(ctx.Identifier()!= null){
+			System.out.printf("Encontre id en el package %d \n", pot);
+			name = ctx.Identifier().getText();
+			checkExistence(name);
+		}
+		return (T) name;
+	}
+//--------------- Helper Methods 
+	
+private void checkExistence(String name){
+	 if(attributes.containsKey(name)){
+		int count = attributes.get(name);
+		this.attributes.put(name, count+1);
+	}
+	System.out.println("Method invocation:" +name);
+}
+	
 
 }

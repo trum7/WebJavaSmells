@@ -1,16 +1,26 @@
 public class Hello {
 
+	String a;
+	ArrayList hello;
+	Integer b;
 
-Arralist e  = 1;
-String[] a = new String();
+	public void go( int a ){
+		//ne = 1 ;
+		//b = new ArrayList();
+		for(Integer g: u){
+			while(true){
+				hello.this.g.h.add();
+				b.y();
+			}
+			
+		}
+		
+		super.a();
+		chao.super.y();
+		a.super.y.f();
+	}
 
-	// public void go( int a ){
-	// 	ne =1 ;
-	// 	ne = 2;
-	// }
-	//
-	// public void go( int a ){
-	// 	ne =1 ;
-	// 	ne = 2;
-	// }
+	public void callGo( ){
+		go();
+	}
 }

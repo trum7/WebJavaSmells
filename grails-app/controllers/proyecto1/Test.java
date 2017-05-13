@@ -18,7 +18,7 @@ public class Test {
 	public static HashMap<String,Integer> lexemes;
 	public static HashMap<String,Integer> attributes;
 	public static HashMap<String,Integer> classes;
-	
+	public static HashMap<String,MethodInfo> methods;
 	public static void main(String[] args) throws Exception {
 		try{
 			
@@ -34,11 +34,13 @@ public class Test {
 			ParseTree tree = parser.compilationUnit(); // begin parsing at init rule
 			Visitor<Object> loader = new Visitor<Object>();
 			loader.visit(tree);
-			System.out.println(tree.toStringTree(parser)); // print LISP-style tree
+//			System.out.println(tree.toStringTree(parser)); // print LISP-style tree
 			
 			lexemes = loader.lexemes;
 			attributes = loader.attributes;
 			classes = loader.classes;
+			methods = loader.methods;
+//			System.out.println("Methods"+ methods.keySet());
 		    /*Iterator it = (Iterator) attributes.entrySet().iterator();
 		    while (it.hasNext()) {
 		        Map.Entry pair = (Map.Entry)it.next();
