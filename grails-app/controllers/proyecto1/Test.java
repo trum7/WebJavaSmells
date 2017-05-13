@@ -24,7 +24,7 @@ public class Test {
 			
 			Test main = new Test(); 
 			
-			System.setIn(new FileInputStream(new File("input.txt")));
+			System.setIn(new FileInputStream(new File("src/input.txt")));
 			ANTLRInputStream input = new ANTLRInputStream(System.in); 
 			Java8Lexer lexer= new Java8Lexer(input);
 			// Identificar al analizador léxico como fuente de tokens para el sintactico
