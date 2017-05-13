@@ -18,13 +18,13 @@ public class Test {
 	public static HashMap<String,Integer> lexemes;
 	public static HashMap<String,Integer> attributes;
 	public static HashMap<String,Integer> classes;
-	
+	public static HashMap<String,MethodInfo> methods;
 	public static void main(String[] args) throws Exception {
 		try{
 			
 			Test main = new Test(); 
 			
-			System.setIn(new FileInputStream(new File("input.txt")));
+			System.setIn(new FileInputStream(new File("src/input.txt")));
 			ANTLRInputStream input = new ANTLRInputStream(System.in); 
 			Java8Lexer lexer= new Java8Lexer(input);
 			// Identificar al analizador léxico como fuente de tokens para el sintactico
@@ -34,11 +34,13 @@ public class Test {
 			ParseTree tree = parser.compilationUnit(); // begin parsing at init rule
 			Visitor<Object> loader = new Visitor<Object>();
 			loader.visit(tree);
-			System.out.println(tree.toStringTree(parser)); // print LISP-style tree
+//			System.out.println(tree.toStringTree(parser)); // print LISP-style tree
 			
 			lexemes = loader.lexemes;
 			attributes = loader.attributes;
 			classes = loader.classes;
+			methods = loader.methods;
+//			System.out.println("Methods"+ methods.keySet());
 		    /*Iterator it = (Iterator) attributes.entrySet().iterator();
 		    while (it.hasNext()) {
 		        Map.Entry pair = (Map.Entry)it.next();
@@ -98,7 +100,7 @@ public class Test {
 	        	String s = "hello world i am from heaven";
 	        	if (search.indexOf(word) != -1) {
 	        	  found = true;
-	        	  System.out.println("Encontro a: " + search + "Con la palabra: " + word);
+	        	  System.out.println("Encontro a: " + search + " Con la palabra: " + word);
 	        	  break;
 	        	}
 	        	

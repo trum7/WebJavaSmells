@@ -1,12 +1,26 @@
-	public class Hello {
-	
-	int a, b, c;
-	float zymoscope, e, f, g;
-   public void test1(int a,int b,int c, String d,double e ){
-	int a = 2;
-	int b = 3;
-   }
-   public void test1(int a,int b,int c, String d,double e ){
+public class Hello {
 
-   }
+	String a;
+	ArrayList hello;
+	Integer b;
+
+	public void go( int a ){
+		//ne = 1 ;
+		//b = new ArrayList();
+		for(Integer g: u){
+			while(true){
+				hello.this.g.h.add();
+				b.y();
+			}
+			
+		}
+		
+		super.a();
+		chao.super.y();
+		a.super.y.f();
+	}
+
+	public void callGo( ){
+		go();
+	}
 }
