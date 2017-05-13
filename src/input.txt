@@ -1,12 +1,16 @@
-	public class Hello {
-	
-	int a, b, c;
-	float zymoscope, e, f, g;
-   public void test1(int a,int b,int c, String d,double e ){
-	int a = 2;
-	int b = 3;
-   }
-   public void test1(int a,int b,int c, String d,double e ){
+public class Hello {
 
-   }
+
+Arralist e  = 1;
+String[] a = new String();
+
+	// public void go( int a ){
+	// 	ne =1 ;
+	// 	ne = 2;
+	// }
+	//
+	// public void go( int a ){
+	// 	ne =1 ;
+	// 	ne = 2;
+	// }
 }

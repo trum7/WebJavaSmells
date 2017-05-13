@@ -98,7 +98,7 @@ public class Test {
 	        	String s = "hello world i am from heaven";
 	        	if (search.indexOf(word) != -1) {
 	        	  found = true;
-	        	  System.out.println("Encontro a: " + search + "Con la palabra: " + word);
+	        	  System.out.println("Encontro a: " + search + " Con la palabra: " + word);
 	        	  break;
 	        	}
 	        	
