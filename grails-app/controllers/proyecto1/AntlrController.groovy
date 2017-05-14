@@ -3,6 +3,8 @@ package proyecto1
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.HashMap;
+import java.util.Iterator
+import java.util.Map
 
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -29,20 +31,27 @@ class AntlrController {
 			// Crear el objeto correspondiente al analizador sintáctico que se alimenta apartir del buffer de tokens
 			Java8Parser parser = new Java8Parser(tokens);
 			ParseTree tree = parser.compilationUnit(); // begin parsing at init rule
-			Visitor<Object> loader = new Visitor<Object>();
+			ClassAndInterVisitor<Object> firstLoader = new ClassAndInterVisitor<Object>();
+			firstLoader.visit(tree);
+			
+			//Visitor<Object> loader = new Visitor<Object>();
+			Visitor<Object> loader = new Visitor<Object>(firstLoader.classes, firstLoader.interfaces);
+			
 			loader.visit(tree);
-			System.out.println(tree.toStringTree(parser)); // print LISP-style tree
+//			System.out.println(tree.toStringTree(parser)); // print LISP-style tree
 			
 			lexemes = loader.lexemes;
 			attributes = loader.attributes;
-			classes = loader.classes;
-			Iterator it = (Iterator) attributes.entrySet().iterator();
-			while (it.hasNext()) {
-				Map.Entry pair = (Map.Entry)it.next();
-				System.out.println(pair.getKey() + " = " + pair.getValue());
-				it.remove(); // avoids a ConcurrentModificationException
-			}
-			
+			classes = firstLoader.classes;
+//			methods = loader.methods;
+//			System.out.println("Methods"+ methods.keySet());
+		    Iterator it = (Iterator) classes.entrySet().iterator();
+		    while (it.hasNext()) {
+		        Map.Entry pair = (Map.Entry)it.next();
+		        
+		        System.out.println(pair.getKey() + " = " + pair.getValue().toString());
+		        it.remove(); // avoids a ConcurrentModificationException
+		    }
 
 			/*try {
 				System.out.println("Si");

@@ -3,18 +3,23 @@
 // instancia
 
 
-public interface Hello {
+public interface BonJu {
 	public void metodoInterfazHello(){};
 	//public int metodo2InterfazHello(int j) {};
 }
 
 public class Saludo{
-	public void metodosaludo(){};
-	// public int metodo2saludo(int j) {};
+	int a;
+	public void metodosaludo(){
+		int j = 2 +3;
+		j = 2;
+	};
+	public int metodo2saludo(int j) {
+		System.out.println();
+	};
 }
 public class Hallo extends Saludo implements Hello , Bye{
-	// public void a(){};
-	// public int b(int j) {};
+
 }
 
 

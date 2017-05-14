@@ -20,7 +20,7 @@ public class Test {
 	public static HashMap<String,ClassInfo> classes;
 	public static HashMap<String,MethodInfo> methods;
 	public static void main(String[] args) throws Exception {
-//		try{
+		try{
 			
 			Test main = new Test(); 
 			
@@ -35,8 +35,10 @@ public class Test {
 			ClassAndInterVisitor<Object> firstLoader = new ClassAndInterVisitor<Object>();
 			firstLoader.visit(tree);
 			
-			Visitor<Object> loader = new Visitor<Object>();
-//			loader.visit(tree);
+			//Visitor<Object> loader = new Visitor<Object>();
+			Visitor<Object> loader = new Visitor<Object>(firstLoader.classes, firstLoader.interfaces);
+			
+			loader.visit(tree);
 //			System.out.println(tree.toStringTree(parser)); // print LISP-style tree
 			
 			lexemes = loader.lexemes;
@@ -63,9 +65,9 @@ public class Test {
 
 			
 			
-//		} catch (Exception e){
-//			System.err.println("Error (Test): " + e.getLocalizedMessage());
-//		}
+		} catch (Exception e){
+			System.err.println("Error (Test): " + e.getLocalizedMessage());
+		}
 	}
 	
 	

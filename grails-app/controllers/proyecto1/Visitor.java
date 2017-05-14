@@ -7,12 +7,26 @@ import java.util.List;
 import proyecto1.Java8Parser.*;
 
 public class Visitor<T> extends Java8BaseVisitor<T>{
-	int pot = 0;
+
 	public HashMap<String,Integer> lexemes = new HashMap<String,Integer>();
 	public HashMap<String,Integer> attributes = new HashMap<String,Integer>();
 	public HashMap<String,Integer> primitiveAttributes = new HashMap<String,Integer>();
-	public HashMap<String,Integer> classes = new HashMap<String,Integer>();
+	public HashMap<String,ClassInfo> classes; 
+	public HashMap<String,InterfaceInfo> interfaces; 
 	public HashMap<String,MethodInfo> methods = new HashMap<String,MethodInfo>();
+	
+	
+	public Visitor(){
+		this.classes = new HashMap<String,ClassInfo>();
+		this.interfaces = new HashMap<String,InterfaceInfo>();
+	}
+	
+	public Visitor(HashMap<String,ClassInfo> classes, HashMap<String,InterfaceInfo> interfaces){
+		this.classes = classes;
+		this.interfaces = interfaces;
+		System.out.println("So far so good");
+	}
+	
 	@Override
 	public T visitCompilationUnit(CompilationUnitContext ctx) {
 		List<TypeDeclarationContext> types = ctx.typeDeclaration(); 
@@ -40,12 +54,13 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	public T visitNormalClassDeclaration(NormalClassDeclarationContext ctx) {
 		int classlong = Integer.parseInt(visitClassBody(ctx.classBody()).toString());
 		String name = ctx.Identifier().getText();
-		
-		if (!classes.containsKey(name)){
-			classes.put(name, classlong);
+		if (classes.containsKey(name)){
+			ClassInfo cInfo = classes.get(name);
+			cInfo.length = classlong;
+			classes.put(name, cInfo);
 		}
-//		System.out.println(classes.keySet().toString());
-		System.out.println("Holaaaaa");
+		System.out.println(classes.keySet().toString());
+		System.out.printf("Longitud Clase: %d \n",classes.get(name).length );
 		return null;
 	}
 
@@ -166,7 +181,7 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 		
 		int tmp = ctx.getStop().getLine() - ctx.getStart().getLine();
 		int TotalLines =(ctx.block().blockStatements()!= null) ? tmp: 1;
-//		System.out.printf("Lineas totales en el metodo %d \n",TotalLines-1);
+		System.out.printf("Lineas totales en el metodo %d \n",TotalLines-1);
 		visitBlock(ctx.block());
 		return (T)(Integer) TotalLines;
 	}
@@ -185,10 +200,10 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 		if(ctx.formalParameterList()!=null){
 			numParams = Integer.parseInt(visitFormalParameterList(ctx.formalParameterList()).toString());
 			mi.paramNum = numParams;
-//			System.out.printf("Cantidad de params %d \n",numParams);
+			System.out.printf("Cantidad de params %d \n",numParams);
 		}else{
 			mi.paramNum = numParams;
-//			System.out.printf("Cantidad de params %d \n",numParams);	
+			System.out.printf("Cantidad de params %d \n",numParams);	
 		}
 		return (T) mi;
 	}
@@ -308,8 +323,8 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	public T visitTypeName(TypeNameContext ctx) {
 		String name ="";
 		if(ctx.packageOrTypeName()!=null){
-			pot+=1;
-			System.out.printf("Numero de packages %d \n",pot);
+		
+			
 			name = (String) visitPackageOrTypeName(ctx.packageOrTypeName()); 
 		}else if(ctx.Identifier()!= null){
 			name = ctx.Identifier().getText();
@@ -322,11 +337,11 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	public T visitPackageOrTypeName(PackageOrTypeNameContext ctx) {
 		String name = "";
 		if(ctx.packageOrTypeName()!=null){
-			pot+=1;
-			System.out.printf("Numero de packages %d \n",pot);
+			
+			
 			name = (String) visitPackageOrTypeName(ctx.packageOrTypeName()); 
 		}else if(ctx.Identifier()!= null){
-			System.out.printf("Encontre id en el package %d \n", pot);
+			
 			name = ctx.Identifier().getText();
 			checkExistence(name);
 		}

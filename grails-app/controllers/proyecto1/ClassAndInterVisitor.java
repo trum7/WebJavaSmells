@@ -75,7 +75,7 @@ public class ClassAndInterVisitor <T> extends Java8BaseVisitor<T> {
 		interfaceInfo = interfaces.get(name);
 		this.methods = interfaceInfo.methods;
 		
-		System.out.println(interfaces.keySet().toString());
+		//System.out.println(interfaces.keySet().toString());
 		
 		visitInterfaceBody(ctx.interfaceBody());
 		return null;
