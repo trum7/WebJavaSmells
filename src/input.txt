@@ -1,4 +1,26 @@
-public class Hello {
+//Extiende
+// implements
+// instancia
+
+
+public interface Hello {
+	public void metodoInterfazHello(){};
+	//public int metodo2InterfazHello(int j) {};
+}
+
+public class Saludo{
+	public void metodosaludo(){};
+	// public int metodo2saludo(int j) {};
+}
+public class Hallo extends Saludo implements Hello , Bye{
+	// public void a(){};
+	// public int b(int j) {};
+}
+
+
+
+
+/*public class Hello {
 
 	String a;
 	ArrayList hello;
@@ -12,9 +34,9 @@ public class Hello {
 				hello.this.g.h.add();
 				b.y();
 			}
-			
+
 		}
-		
+
 		super.a();
 		chao.super.y();
 		a.super.y.f();
@@ -23,4 +45,4 @@ public class Hello {
 	public void callGo( ){
 		go();
 	}
-}
+}*/

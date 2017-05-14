@@ -13,7 +13,6 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	public HashMap<String,Integer> primitiveAttributes = new HashMap<String,Integer>();
 	public HashMap<String,Integer> classes = new HashMap<String,Integer>();
 	public HashMap<String,MethodInfo> methods = new HashMap<String,MethodInfo>();
-
 	@Override
 	public T visitCompilationUnit(CompilationUnitContext ctx) {
 		List<TypeDeclarationContext> types = ctx.typeDeclaration(); 
@@ -46,6 +45,7 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 			classes.put(name, classlong);
 		}
 //		System.out.println(classes.keySet().toString());
+		System.out.println("Holaaaaa");
 		return null;
 	}
 

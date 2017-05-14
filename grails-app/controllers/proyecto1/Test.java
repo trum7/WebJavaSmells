@@ -17,10 +17,10 @@ public class Test {
 
 	public static HashMap<String,Integer> lexemes;
 	public static HashMap<String,Integer> attributes;
-	public static HashMap<String,Integer> classes;
+	public static HashMap<String,ClassInfo> classes;
 	public static HashMap<String,MethodInfo> methods;
 	public static void main(String[] args) throws Exception {
-		try{
+//		try{
 			
 			Test main = new Test(); 
 			
@@ -32,21 +32,25 @@ public class Test {
 			// Crear el objeto correspondiente al analizador sintáctico que se alimenta apartir del buffer de tokens
 			Java8Parser parser = new Java8Parser(tokens);
 			ParseTree tree = parser.compilationUnit(); // begin parsing at init rule
+			ClassAndInterVisitor<Object> firstLoader = new ClassAndInterVisitor<Object>();
+			firstLoader.visit(tree);
+			
 			Visitor<Object> loader = new Visitor<Object>();
-			loader.visit(tree);
+//			loader.visit(tree);
 //			System.out.println(tree.toStringTree(parser)); // print LISP-style tree
 			
 			lexemes = loader.lexemes;
 			attributes = loader.attributes;
-			classes = loader.classes;
+			classes = firstLoader.classes;
 			methods = loader.methods;
 //			System.out.println("Methods"+ methods.keySet());
-		    /*Iterator it = (Iterator) attributes.entrySet().iterator();
+		    Iterator it = (Iterator) classes.entrySet().iterator();
 		    while (it.hasNext()) {
 		        Map.Entry pair = (Map.Entry)it.next();
-		        System.out.println(pair.getKey() + " = " + pair.getValue());
+		        
+		        System.out.println(pair.getKey() + " = " + pair.getValue().toString());
 		        it.remove(); // avoids a ConcurrentModificationException
-		    }*/
+		    }
 	        
 
 	        try {
@@ -59,9 +63,9 @@ public class Test {
 
 			
 			
-		} catch (Exception e){
-			System.err.println("Error (Test): " + e);
-		}
+//		} catch (Exception e){
+//			System.err.println("Error (Test): " + e.getLocalizedMessage());
+//		}
 	}
 	
 	
