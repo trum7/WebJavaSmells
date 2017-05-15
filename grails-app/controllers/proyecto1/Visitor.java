@@ -385,8 +385,7 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 					foundMethod.count+=1;
 					foundClass.methods.put(name, foundMethod);
 				}
-			}
-			
+			}	
 			this.methods.put(name, mi);	
 			System.out.println(this.methods.get(name).toString());
 		}
@@ -397,9 +396,7 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	@Override
 	public T visitTypeName(TypeNameContext ctx) {
 		String name ="";
-		if(ctx.packageOrTypeName()!=null){
-		
-			
+		if(ctx.packageOrTypeName()!=null){	
 			name = (String) visitPackageOrTypeName(ctx.packageOrTypeName()); 
 		}else if(ctx.Identifier()!= null){
 			name = ctx.Identifier().getText();
@@ -411,9 +408,7 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	@Override
 	public T visitPackageOrTypeName(PackageOrTypeNameContext ctx) {
 		String name = "";
-		if(ctx.packageOrTypeName()!=null){
-			
-			
+		if(ctx.packageOrTypeName()!=null){	
 			name = (String) visitPackageOrTypeName(ctx.packageOrTypeName()); 
 		}else if(ctx.Identifier()!= null){
 			

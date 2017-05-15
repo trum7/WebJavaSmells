@@ -3,10 +3,8 @@
 // instancia
 
 public interface NameOfInterface {
-	public void metodoInterfazHello(){};
-
-   // Any number of abstract method declarations\
-}
+ public void metodoInterfazHello(){};
+  }
 
 public interface Bye {
 
