@@ -23,7 +23,7 @@ public class Hallo extends Saludo implements Hello , Bye{
 
 
 
-public class Hello {
+public class Hello extends Saludo  {
 
 	String a;
 	ArrayList hello;
@@ -47,5 +47,6 @@ public class Hello {
 
 	public void callGo( ){
 		go();
+		metodosaludo();
 	}
 }

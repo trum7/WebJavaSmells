@@ -67,10 +67,22 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 		if (classes.containsKey(name)){
 			ClassInfo cInfo = classes.get(name);
 			cInfo.length = classlong;
+			if(ctx.superclass() != null){
+				String parent = ctx.superclass().classType().Identifier().getText();
+				cInfo.extendsClass.add(parent);
+			}
+			if (ctx.superinterfaces() != null){
+				List<InterfaceTypeContext> interfaces = ctx.superinterfaces().interfaceTypeList().interfaceType();
+				for(InterfaceTypeContext in : interfaces){
+					cInfo.implementInterfaces.add(in.classType().Identifier().getText());
+				}
+			}
 			classes.put(name, cInfo);		
 		}
 		System.out.println(classes.keySet().toString());
 		System.out.printf("Longitud Clase: %d \n",classes.get(name).length );
+		
+		
 		return null;
 	}
 
