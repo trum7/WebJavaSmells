@@ -108,7 +108,7 @@
    	                        <g:form controller="antlr" action="index">
                             <div class="form-group">
                                 <div class="col-md-12" style="margin-bottom : 5px">
-                                    <input class="form-control" id="username" name="userId" placeholder="Codigo" type="text">
+                                    <input class="form-control" id="codeInput" name="code" placeholder="Codigo" type="text">
                                 </div>
 
                                 <div class="col-md-6" style="margin-bottom : 5px; text-align : right">
