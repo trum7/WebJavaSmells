@@ -2444,3 +2444,1393 @@ java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on nu
 2017-05-16 03:55:28,444 [Thread-10] ERROR StackTrace  - Full Stack Trace:
 java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
 	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:55:35,437 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfFileChange(AbstractGrailsPluginManager.java:366)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.informPluginManager(GrailsProjectWatcher.java:226)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.access$400(GrailsProjectWatcher.java:48)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$1.onNew(GrailsProjectWatcher.java:152)
+	at org.codehaus.groovy.grails.compiler.AbstractDirectoryWatcher.fireOnNew(AbstractDirectoryWatcher.java:76)
+	at org.codehaus.groovy.grails.compiler.WatchServiceDirectoryWatcher.run(WatchServiceDirectoryWatcher.java:95)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:154)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:161)
+2017-05-16 03:55:35,438 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:55:35,438 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:55:35,438 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:55:43,173 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfFileChange(AbstractGrailsPluginManager.java:366)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.informPluginManager(GrailsProjectWatcher.java:226)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.access$400(GrailsProjectWatcher.java:48)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$1.onNew(GrailsProjectWatcher.java:152)
+	at org.codehaus.groovy.grails.compiler.AbstractDirectoryWatcher.fireOnNew(AbstractDirectoryWatcher.java:76)
+	at org.codehaus.groovy.grails.compiler.WatchServiceDirectoryWatcher.run(WatchServiceDirectoryWatcher.java:95)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:154)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:161)
+2017-05-16 03:55:43,173 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:55:43,173 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:55:43,174 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:55:52,250 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfFileChange(AbstractGrailsPluginManager.java:366)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.informPluginManager(GrailsProjectWatcher.java:226)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.access$400(GrailsProjectWatcher.java:48)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$1.onNew(GrailsProjectWatcher.java:152)
+	at org.codehaus.groovy.grails.compiler.AbstractDirectoryWatcher.fireOnNew(AbstractDirectoryWatcher.java:76)
+	at org.codehaus.groovy.grails.compiler.WatchServiceDirectoryWatcher.run(WatchServiceDirectoryWatcher.java:95)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:154)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:161)
+2017-05-16 03:55:52,251 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:55:52,251 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:55:52,251 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:56:01,238 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$2.run(GrailsProjectWatcher.java:246)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.firePendingClassChangeEvents(GrailsProjectWatcher.java:107)
+	at org.codehaus.groovy.grails.cli.agent.GrailsPluginManagerReloadPlugin.reloadEvent(GrailsPluginManagerReloadPlugin.java:42)
+	at org.springsource.loaded.TypeRegistry.fireReloadEvent(TypeRegistry.java:1794)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:417)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,239 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,239 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,239 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,284 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$2.run(GrailsProjectWatcher.java:246)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.firePendingClassChangeEvents(GrailsProjectWatcher.java:107)
+	at org.codehaus.groovy.grails.cli.agent.GrailsPluginManagerReloadPlugin.reloadEvent(GrailsPluginManagerReloadPlugin.java:42)
+	at org.springsource.loaded.TypeRegistry.fireReloadEvent(TypeRegistry.java:1794)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:417)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,284 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,285 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,285 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,479 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$2.run(GrailsProjectWatcher.java:246)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.firePendingClassChangeEvents(GrailsProjectWatcher.java:107)
+	at org.codehaus.groovy.grails.cli.agent.GrailsPluginManagerReloadPlugin.reloadEvent(GrailsPluginManagerReloadPlugin.java:42)
+	at org.springsource.loaded.TypeRegistry.fireReloadEvent(TypeRegistry.java:1794)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:417)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,479 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,479 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,480 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,698 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$2.run(GrailsProjectWatcher.java:246)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.firePendingClassChangeEvents(GrailsProjectWatcher.java:107)
+	at org.codehaus.groovy.grails.cli.agent.GrailsPluginManagerReloadPlugin.reloadEvent(GrailsPluginManagerReloadPlugin.java:42)
+	at org.springsource.loaded.TypeRegistry.fireReloadEvent(TypeRegistry.java:1794)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:417)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,698 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,699 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,699 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,784 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$2.run(GrailsProjectWatcher.java:246)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.firePendingClassChangeEvents(GrailsProjectWatcher.java:107)
+	at org.codehaus.groovy.grails.cli.agent.GrailsPluginManagerReloadPlugin.reloadEvent(GrailsPluginManagerReloadPlugin.java:42)
+	at org.springsource.loaded.TypeRegistry.fireReloadEvent(TypeRegistry.java:1794)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:417)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,785 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,785 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,785 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,898 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$2.run(GrailsProjectWatcher.java:246)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.firePendingClassChangeEvents(GrailsProjectWatcher.java:107)
+	at org.codehaus.groovy.grails.cli.agent.GrailsPluginManagerReloadPlugin.reloadEvent(GrailsPluginManagerReloadPlugin.java:42)
+	at org.springsource.loaded.TypeRegistry.fireReloadEvent(TypeRegistry.java:1794)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:417)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,899 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,899 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,899 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,976 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$2.run(GrailsProjectWatcher.java:246)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.firePendingClassChangeEvents(GrailsProjectWatcher.java:107)
+	at org.codehaus.groovy.grails.cli.agent.GrailsPluginManagerReloadPlugin.reloadEvent(GrailsPluginManagerReloadPlugin.java:42)
+	at org.springsource.loaded.TypeRegistry.fireReloadEvent(TypeRegistry.java:1794)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:417)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,977 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,977 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:01,977 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:02,031 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$2.run(GrailsProjectWatcher.java:246)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.firePendingClassChangeEvents(GrailsProjectWatcher.java:107)
+	at org.codehaus.groovy.grails.cli.agent.GrailsPluginManagerReloadPlugin.reloadEvent(GrailsPluginManagerReloadPlugin.java:42)
+	at org.springsource.loaded.TypeRegistry.fireReloadEvent(TypeRegistry.java:1794)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:417)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:02,032 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:02,032 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:02,032 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:02,427 [FileSystemWatcher: files=#424 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "AssetPipelineGrailsPlugin$$DQJk0pbq"
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at org.springsource.loaded.ChildClassLoader.defineClass(ChildClassLoader.java:37)
+	at org.springsource.loaded.TypeRegistry.defineClass(TypeRegistry.java:1116)
+	at org.springsource.loaded.CurrentLiveVersion.define(CurrentLiveVersion.java:111)
+	at org.springsource.loaded.CurrentLiveVersion.<init>(CurrentLiveVersion.java:99)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:396)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:02,427 [FileSystemWatcher: files=#424 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "AssetPipelineGrailsPlugin$$DQJk0pbq"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:02,428 [FileSystemWatcher: files=#424 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "AssetPipelineGrailsPlugin$$DQJk0pbq"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:02,428 [FileSystemWatcher: files=#424 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "AssetPipelineGrailsPlugin$$DQJk0pbq"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:02,455 [FileSystemWatcher: files=#424 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "AssetUrlMappings$$DQJk0pcG"
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at org.springsource.loaded.ChildClassLoader.defineClass(ChildClassLoader.java:37)
+	at org.springsource.loaded.TypeRegistry.defineClass(TypeRegistry.java:1116)
+	at org.springsource.loaded.CurrentLiveVersion.define(CurrentLiveVersion.java:111)
+	at org.springsource.loaded.CurrentLiveVersion.<init>(CurrentLiveVersion.java:99)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:396)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:02,455 [FileSystemWatcher: files=#424 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "AssetUrlMappings$$DQJk0pcG"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:02,456 [FileSystemWatcher: files=#424 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "AssetUrlMappings$$DQJk0pcG"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:02,456 [FileSystemWatcher: files=#424 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "AssetUrlMappings$$DQJk0pcG"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:56:02,606 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfFileChange(AbstractGrailsPluginManager.java:366)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.informPluginManager(GrailsProjectWatcher.java:226)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.access$400(GrailsProjectWatcher.java:48)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$1.onNew(GrailsProjectWatcher.java:152)
+	at org.codehaus.groovy.grails.compiler.AbstractDirectoryWatcher.fireOnNew(AbstractDirectoryWatcher.java:76)
+	at org.codehaus.groovy.grails.compiler.WatchServiceDirectoryWatcher.run(WatchServiceDirectoryWatcher.java:95)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:154)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:161)
+2017-05-16 03:56:02,606 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:56:02,607 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:56:02,607 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:56:10,158 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfFileChange(AbstractGrailsPluginManager.java:366)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.informPluginManager(GrailsProjectWatcher.java:226)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.access$400(GrailsProjectWatcher.java:48)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$1.onNew(GrailsProjectWatcher.java:152)
+	at org.codehaus.groovy.grails.compiler.AbstractDirectoryWatcher.fireOnNew(AbstractDirectoryWatcher.java:76)
+	at org.codehaus.groovy.grails.compiler.WatchServiceDirectoryWatcher.run(WatchServiceDirectoryWatcher.java:95)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:154)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:161)
+2017-05-16 03:56:10,160 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:56:10,161 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:56:10,161 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:56:17,895 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfFileChange(AbstractGrailsPluginManager.java:366)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.informPluginManager(GrailsProjectWatcher.java:226)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.access$400(GrailsProjectWatcher.java:48)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$1.onNew(GrailsProjectWatcher.java:152)
+	at org.codehaus.groovy.grails.compiler.AbstractDirectoryWatcher.fireOnNew(AbstractDirectoryWatcher.java:76)
+	at org.codehaus.groovy.grails.compiler.WatchServiceDirectoryWatcher.run(WatchServiceDirectoryWatcher.java:95)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:154)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:161)
+2017-05-16 03:56:17,896 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:56:17,896 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:56:17,896 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:56:31,650 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfFileChange(AbstractGrailsPluginManager.java:366)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.informPluginManager(GrailsProjectWatcher.java:226)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.access$400(GrailsProjectWatcher.java:48)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$1.onNew(GrailsProjectWatcher.java:152)
+	at org.codehaus.groovy.grails.compiler.AbstractDirectoryWatcher.fireOnNew(AbstractDirectoryWatcher.java:76)
+	at org.codehaus.groovy.grails.compiler.WatchServiceDirectoryWatcher.run(WatchServiceDirectoryWatcher.java:95)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:154)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:161)
+2017-05-16 03:56:31,651 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:56:31,651 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:56:31,651 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:56:38,703 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfFileChange(AbstractGrailsPluginManager.java:366)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.informPluginManager(GrailsProjectWatcher.java:226)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.access$400(GrailsProjectWatcher.java:48)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$1.onNew(GrailsProjectWatcher.java:152)
+	at org.codehaus.groovy.grails.compiler.AbstractDirectoryWatcher.fireOnNew(AbstractDirectoryWatcher.java:76)
+	at org.codehaus.groovy.grails.compiler.WatchServiceDirectoryWatcher.run(WatchServiceDirectoryWatcher.java:95)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:154)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:161)
+2017-05-16 03:56:38,703 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:56:38,710 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:56:38,710 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:57:00,196 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfFileChange(AbstractGrailsPluginManager.java:366)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.informPluginManager(GrailsProjectWatcher.java:226)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.access$400(GrailsProjectWatcher.java:48)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$1.onNew(GrailsProjectWatcher.java:152)
+	at org.codehaus.groovy.grails.compiler.AbstractDirectoryWatcher.fireOnNew(AbstractDirectoryWatcher.java:76)
+	at org.codehaus.groovy.grails.compiler.WatchServiceDirectoryWatcher.run(WatchServiceDirectoryWatcher.java:95)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:154)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:161)
+2017-05-16 03:57:00,196 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:57:00,197 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:57:00,197 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:57:10,102 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfFileChange(AbstractGrailsPluginManager.java:366)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.informPluginManager(GrailsProjectWatcher.java:226)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.access$400(GrailsProjectWatcher.java:48)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$1.onNew(GrailsProjectWatcher.java:152)
+	at org.codehaus.groovy.grails.compiler.AbstractDirectoryWatcher.fireOnNew(AbstractDirectoryWatcher.java:76)
+	at org.codehaus.groovy.grails.compiler.WatchServiceDirectoryWatcher.run(WatchServiceDirectoryWatcher.java:95)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:154)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:161)
+2017-05-16 03:57:10,103 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:57:10,103 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:57:10,103 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:57:10,927 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$2.run(GrailsProjectWatcher.java:246)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.firePendingClassChangeEvents(GrailsProjectWatcher.java:107)
+	at org.codehaus.groovy.grails.cli.agent.GrailsPluginManagerReloadPlugin.reloadEvent(GrailsPluginManagerReloadPlugin.java:42)
+	at org.springsource.loaded.TypeRegistry.fireReloadEvent(TypeRegistry.java:1794)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:417)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:10,928 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:10,928 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:10,928 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:12,188 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$2.run(GrailsProjectWatcher.java:246)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.firePendingClassChangeEvents(GrailsProjectWatcher.java:107)
+	at org.codehaus.groovy.grails.cli.agent.GrailsPluginManagerReloadPlugin.reloadEvent(GrailsPluginManagerReloadPlugin.java:42)
+	at org.springsource.loaded.TypeRegistry.fireReloadEvent(TypeRegistry.java:1794)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:417)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:12,189 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:12,189 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:12,189 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:12,663 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$2.run(GrailsProjectWatcher.java:246)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.firePendingClassChangeEvents(GrailsProjectWatcher.java:107)
+	at org.codehaus.groovy.grails.cli.agent.GrailsPluginManagerReloadPlugin.reloadEvent(GrailsPluginManagerReloadPlugin.java:42)
+	at org.springsource.loaded.TypeRegistry.fireReloadEvent(TypeRegistry.java:1794)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:417)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:12,663 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:12,664 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:12,664 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:12,786 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$2.run(GrailsProjectWatcher.java:246)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.firePendingClassChangeEvents(GrailsProjectWatcher.java:107)
+	at org.codehaus.groovy.grails.cli.agent.GrailsPluginManagerReloadPlugin.reloadEvent(GrailsPluginManagerReloadPlugin.java:42)
+	at org.springsource.loaded.TypeRegistry.fireReloadEvent(TypeRegistry.java:1794)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:417)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:12,787 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:12,787 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:12,787 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:12,916 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$2.run(GrailsProjectWatcher.java:246)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.firePendingClassChangeEvents(GrailsProjectWatcher.java:107)
+	at org.codehaus.groovy.grails.cli.agent.GrailsPluginManagerReloadPlugin.reloadEvent(GrailsPluginManagerReloadPlugin.java:42)
+	at org.springsource.loaded.TypeRegistry.fireReloadEvent(TypeRegistry.java:1794)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:417)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:12,916 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:12,916 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:12,917 [FileSystemWatcher: files=#344 cl=java.net.URLClassLoader@311a3c9d] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:14,877 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/FraccionController$$DQJk18SY"
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at org.springsource.loaded.ChildClassLoader.defineClass(ChildClassLoader.java:37)
+	at org.springsource.loaded.TypeRegistry.defineClass(TypeRegistry.java:1116)
+	at org.springsource.loaded.CurrentLiveVersion.define(CurrentLiveVersion.java:111)
+	at org.springsource.loaded.CurrentLiveVersion.<init>(CurrentLiveVersion.java:99)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:396)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:14,878 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/FraccionController$$DQJk18SY"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:14,878 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/FraccionController$$DQJk18SY"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:14,879 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/FraccionController$$DQJk18SY"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,004 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/IngenieroController$$DQJk18TO"
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at org.springsource.loaded.ChildClassLoader.defineClass(ChildClassLoader.java:37)
+	at org.springsource.loaded.TypeRegistry.defineClass(TypeRegistry.java:1116)
+	at org.springsource.loaded.CurrentLiveVersion.define(CurrentLiveVersion.java:111)
+	at org.springsource.loaded.CurrentLiveVersion.<init>(CurrentLiveVersion.java:99)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:396)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,004 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/IngenieroController$$DQJk18TO"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,005 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/IngenieroController$$DQJk18TO"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,005 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/IngenieroController$$DQJk18TO"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,200 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/MuestraController$$DQJk18VV"
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at org.springsource.loaded.ChildClassLoader.defineClass(ChildClassLoader.java:37)
+	at org.springsource.loaded.TypeRegistry.defineClass(TypeRegistry.java:1116)
+	at org.springsource.loaded.CurrentLiveVersion.define(CurrentLiveVersion.java:111)
+	at org.springsource.loaded.CurrentLiveVersion.<init>(CurrentLiveVersion.java:99)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:396)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,200 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/MuestraController$$DQJk18VV"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,200 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/MuestraController$$DQJk18VV"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,201 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/MuestraController$$DQJk18VV"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,281 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/PersonaController$$DQJk18WZ"
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at org.springsource.loaded.ChildClassLoader.defineClass(ChildClassLoader.java:37)
+	at org.springsource.loaded.TypeRegistry.defineClass(TypeRegistry.java:1116)
+	at org.springsource.loaded.CurrentLiveVersion.define(CurrentLiveVersion.java:111)
+	at org.springsource.loaded.CurrentLiveVersion.<init>(CurrentLiveVersion.java:99)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:396)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,281 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/PersonaController$$DQJk18WZ"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,281 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/PersonaController$$DQJk18WZ"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,282 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/PersonaController$$DQJk18WZ"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,384 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/SolicitudController$$DQJk18XW"
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at org.springsource.loaded.ChildClassLoader.defineClass(ChildClassLoader.java:37)
+	at org.springsource.loaded.TypeRegistry.defineClass(TypeRegistry.java:1116)
+	at org.springsource.loaded.CurrentLiveVersion.define(CurrentLiveVersion.java:111)
+	at org.springsource.loaded.CurrentLiveVersion.<init>(CurrentLiveVersion.java:99)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:396)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,385 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/SolicitudController$$DQJk18XW"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,385 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/SolicitudController$$DQJk18XW"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,385 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/SolicitudController$$DQJk18XW"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,445 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/UserController$$DQJk18Y9"
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at org.springsource.loaded.ChildClassLoader.defineClass(ChildClassLoader.java:37)
+	at org.springsource.loaded.TypeRegistry.defineClass(TypeRegistry.java:1116)
+	at org.springsource.loaded.CurrentLiveVersion.define(CurrentLiveVersion.java:111)
+	at org.springsource.loaded.CurrentLiveVersion.<init>(CurrentLiveVersion.java:99)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:396)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,445 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/UserController$$DQJk18Y9"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,445 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/UserController$$DQJk18Y9"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:15,446 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/UserController$$DQJk18Y9"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:19,144 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/FraccionController$$DQJk19w8"
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at org.springsource.loaded.ChildClassLoader.defineClass(ChildClassLoader.java:37)
+	at org.springsource.loaded.TypeRegistry.defineClass(TypeRegistry.java:1116)
+	at org.springsource.loaded.CurrentLiveVersion.define(CurrentLiveVersion.java:111)
+	at org.springsource.loaded.CurrentLiveVersion.<init>(CurrentLiveVersion.java:99)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:396)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:19,144 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/FraccionController$$DQJk19w8"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:19,145 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/FraccionController$$DQJk19w8"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:19,145 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/FraccionController$$DQJk19w8"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:20,631 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/UsuarioController$$DQJk1ASx"
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at org.springsource.loaded.ChildClassLoader.defineClass(ChildClassLoader.java:37)
+	at org.springsource.loaded.TypeRegistry.defineClass(TypeRegistry.java:1116)
+	at org.springsource.loaded.CurrentLiveVersion.define(CurrentLiveVersion.java:111)
+	at org.springsource.loaded.CurrentLiveVersion.<init>(CurrentLiveVersion.java:99)
+	at org.springsource.loaded.ReloadableType.loadNewVersion(ReloadableType.java:396)
+	at org.springsource.loaded.TypeRegistry.loadNewVersion(TypeRegistry.java:845)
+	at org.springsource.loaded.agent.ReloadableFileChangeListener.fileChanged(ReloadableFileChangeListener.java:51)
+	at org.springsource.loaded.agent.Watcher.determineChangesSince(FileSystemWatcher.java:235)
+	at org.springsource.loaded.agent.Watcher.run(FileSystemWatcher.java:219)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:20,631 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/UsuarioController$$DQJk1ASx"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:20,632 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/UsuarioController$$DQJk1ASx"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:20,632 [FileSystemWatcher: files=#427 cl=groovy.lang.GroovyClassLoader@284c21b3] ERROR StackTrace  - Full Stack Trace:
+java.lang.LinkageError: loader (instance of  org/springsource/loaded/ChildClassLoader): attempted  duplicate class definition for name: "proyecto1/UsuarioController$$DQJk1ASx"
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	at java.lang.Thread.run(Thread.java:745)
+2017-05-16 03:57:25,141 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfFileChange(AbstractGrailsPluginManager.java:366)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.informPluginManager(GrailsProjectWatcher.java:226)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.access$400(GrailsProjectWatcher.java:48)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$1.onNew(GrailsProjectWatcher.java:152)
+	at org.codehaus.groovy.grails.compiler.AbstractDirectoryWatcher.fireOnNew(AbstractDirectoryWatcher.java:76)
+	at org.codehaus.groovy.grails.compiler.WatchServiceDirectoryWatcher.run(WatchServiceDirectoryWatcher.java:95)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:154)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:161)
+2017-05-16 03:57:25,142 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:57:25,142 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:57:25,142 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:57:31,543 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at org.codehaus.groovy.runtime.NullObject.getProperty(NullObject.java:57)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:168)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.getProperty(NullCallSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGetProperty(AbstractCallSite.java:227)
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+	at sun.reflect.GeneratedMethodAccessor209.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springsource.loaded.ri.OriginalClassInvoker.invoke(OriginalClassInvoker.java:47)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1299)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at CacheGrailsPlugin$_closure4.call(CacheGrailsPlugin.groovy)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:767)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:716)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPluginManager.informObservers(DefaultGrailsPluginManager.java:242)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:408)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfFileChange(AbstractGrailsPluginManager.java:366)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.informPluginManager(GrailsProjectWatcher.java:226)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.access$400(GrailsProjectWatcher.java:48)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher$1.onNew(GrailsProjectWatcher.java:152)
+	at org.codehaus.groovy.grails.compiler.AbstractDirectoryWatcher.fireOnNew(AbstractDirectoryWatcher.java:76)
+	at org.codehaus.groovy.grails.compiler.WatchServiceDirectoryWatcher.run(WatchServiceDirectoryWatcher.java:95)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:154)
+	at org.codehaus.groovy.grails.project.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:161)
+2017-05-16 03:57:31,544 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:57:31,544 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2017-05-16 03:57:31,544 [Thread-10] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
+	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
