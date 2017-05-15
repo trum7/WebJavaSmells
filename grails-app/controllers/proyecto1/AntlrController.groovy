@@ -23,8 +23,11 @@ class AntlrController {
 			
 			Test main = new Test();
 			
-			System.setIn(new FileInputStream(new File("src/input.txt")));
-			ANTLRInputStream input = new ANTLRInputStream(System.in);
+			String input1 = params.code;
+			println input1;
+			
+//			System.setIn(new FileInputStream(new File("src/input.txt")));
+			ANTLRInputStream input = new ANTLRInputStream(input1);
 			Java8Lexer lexer= new Java8Lexer(input);
 			// Identificar al analizador léxico como fuente de tokens para el sintactico
 			CommonTokenStream tokens = new CommonTokenStream(lexer);
