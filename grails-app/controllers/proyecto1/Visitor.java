@@ -9,22 +9,25 @@ import proyecto1.Java8Parser.*;
 public class Visitor<T> extends Java8BaseVisitor<T>{
 
 	public HashMap<String,Integer> lexemes = new HashMap<String,Integer>();
-	public HashMap<String,Integer> attributes = new HashMap<String,Integer>();
-	public HashMap<String,Integer> primitiveAttributes = new HashMap<String,Integer>();
+	public HashMap<String,Integer> attributes ;
+	public HashMap<String,Integer> primitiveAttributes ;
 	public HashMap<String,ClassInfo> classes; 
 	public HashMap<String,InterfaceInfo> interfaces; 
-	public HashMap<String,MethodInfo> methods = new HashMap<String,MethodInfo>();
-	
+	public HashMap<String,MethodInfo> methods;
+	public HashMap<String,MethodInfo> currMeth;
+	private String currentClass = "";
 	
 	public Visitor(){
 		this.classes = new HashMap<String,ClassInfo>();
 		this.interfaces = new HashMap<String,InterfaceInfo>();
+		this.methods = new HashMap<String,MethodInfo>();
+		
 	}
 	
 	public Visitor(HashMap<String,ClassInfo> classes, HashMap<String,InterfaceInfo> interfaces){
 		this.classes = classes;
 		this.interfaces = interfaces;
-		System.out.println("So far so good");
+		this.methods = new HashMap<String,MethodInfo>();
 	}
 	
 	@Override
@@ -46,6 +49,13 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	// --------------------------   CLASSES DECLARATIONS 
 	@Override
 	public T visitClassDeclaration(ClassDeclarationContext ctx) {
+		String name = ctx.normalClassDeclaration().Identifier().getText();
+		if(classes.containsKey(name)){
+			this.currentClass =  name;
+			this.attributes = classes.get(name).attributes;
+			this.primitiveAttributes = classes.get(name).primitiveAttributes;
+			this.currMeth = classes.get(name).methods;
+		}	
 		visitNormalClassDeclaration(ctx.normalClassDeclaration());
 		return null;
 	}
@@ -53,11 +63,11 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	@Override
 	public T visitNormalClassDeclaration(NormalClassDeclarationContext ctx) {
 		int classlong = Integer.parseInt(visitClassBody(ctx.classBody()).toString());
-		String name = ctx.Identifier().getText();
+		String name = this.currentClass;
 		if (classes.containsKey(name)){
 			ClassInfo cInfo = classes.get(name);
 			cInfo.length = classlong;
-			classes.put(name, cInfo);
+			classes.put(name, cInfo);		
 		}
 		System.out.println(classes.keySet().toString());
 		System.out.printf("Longitud Clase: %d \n",classes.get(name).length );
@@ -67,7 +77,7 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	
 	@Override
 	public T visitClassBody(ClassBodyContext ctx) {
-		
+	
 		List<ClassBodyDeclarationContext> bodyDecl = ctx.classBodyDeclaration();
 		int classLong = ctx.getStop().getLine()-ctx.getStart().getLine()-1;
 //		System.out.printf("Longitud Clase: %d \n",classLong );
@@ -162,16 +172,17 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	//-------------------- METHOD DECLARATION 
 	@Override
 	public T visitMethodDeclaration(MethodDeclarationContext ctx) {
-//		System.out.println("---------------------------------------------------");
-//		System.out.println("Entre a declaracion metodos");
+		
 		int totalLines = Integer.parseInt(visitMethodBody(ctx.methodBody()).toString());
 		MethodInfo mi = (MethodInfo) visitMethodHeader(ctx.methodHeader());
-//		System.out.println("Nombre metodo "+mi.name);
+		MethodInfo currentMethod = this.currMeth.get(mi.name);
 		mi.length = totalLines;
+		mi.belongs = currentMethod.belongs;
+		currentMethod.length = totalLines;
+		//this.methods = this.classes.get(classma)
 		if(!methods.containsKey(mi.name)){
 			this.methods.put(mi.name, mi);
 		}
-//		System.out.println("---------------------------------------------------");
 
 		return null;
 	}
@@ -194,15 +205,20 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	
 	@Override
 	public T visitMethodDeclarator(MethodDeclaratorContext ctx) {
+
+		String name = ctx.Identifier().getText();
+		MethodInfo currentMethod = this.currMeth.get(name);
 		MethodInfo mi = new MethodInfo();
 		mi.name = ctx.Identifier().getText();
 		int numParams = 0;
 		if(ctx.formalParameterList()!=null){
 			numParams = Integer.parseInt(visitFormalParameterList(ctx.formalParameterList()).toString());
 			mi.paramNum = numParams;
+			currentMethod.paramNum = numParams;
 			System.out.printf("Cantidad de params %d \n",numParams);
 		}else{
 			mi.paramNum = numParams;
+			currentMethod.paramNum = numParams;
 			System.out.printf("Cantidad de params %d \n",numParams);	
 		}
 		return (T) mi;
@@ -312,10 +328,21 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 		String name = ctx.Identifier().getText();
 		if(methods.containsKey(name)){
 			MethodInfo mi = methods.get(name);
+			MethodInfo calledMethod = classes.get(mi.belongs).methods.get(name);
 			mi.count+=1;
+			ClassInfo foundClass = classes.get(mi.belongs);
+			if(foundClass != null){
+				MethodInfo foundMethod = foundClass.methods.get(mi.name);
+				if(foundMethod != null){
+					foundMethod.count+=1;
+					foundClass.methods.put(name, foundMethod);
+				}
+			}
+			
 			this.methods.put(name, mi);	
+			System.out.println(this.methods.get(name).toString());
 		}
-//		System.out.println(methods.toString());
+		System.out.println(methods.toString());
 		return null;
 	}
 	

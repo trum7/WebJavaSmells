@@ -11,7 +11,7 @@ public class ClassAndInterVisitor <T> extends Java8BaseVisitor<T> {
 	public HashMap<String,ClassInfo> classes = new HashMap<String,ClassInfo>();
 	public HashMap<String,InterfaceInfo> interfaces = new HashMap<String,InterfaceInfo>();
 	public HashMap<String,MethodInfo> methods; 
-	public String className = "";
+	public String currentName = "";
 	
 	@Override
 	public T visitCompilationUnit(CompilationUnitContext ctx) {
@@ -31,6 +31,8 @@ public class ClassAndInterVisitor <T> extends Java8BaseVisitor<T> {
 // ----------------------   CLASS DECLARATION 	---------------------- //
 	@Override
 	public T visitClassDeclaration(ClassDeclarationContext ctx) {
+		String name = ctx.normalClassDeclaration().Identifier().getText();
+		this.currentName =  name;
 		visitNormalClassDeclaration(ctx.normalClassDeclaration());
 		return null;
 	}
@@ -41,7 +43,6 @@ public class ClassAndInterVisitor <T> extends Java8BaseVisitor<T> {
 		ClassInfo classInfo = new ClassInfo();
 		classInfo.name = name;
 		if (!classes.containsKey(name)){
-			this.className = name;
 			classes.put(name, classInfo);
 		}
 		classInfo = classes.get(name);
@@ -60,6 +61,8 @@ public class ClassAndInterVisitor <T> extends Java8BaseVisitor<T> {
 // ----------------------   INTERFACE  DECLARATION 	---------------------- //
 	@Override
 	public T visitInterfaceDeclaration(InterfaceDeclarationContext ctx) {
+		String name = ctx.normalInterfaceDeclaration().Identifier().getText();
+		this.currentName =  name;
 		visitNormalInterfaceDeclaration(ctx.normalInterfaceDeclaration());
 		return null;
 	}
@@ -118,6 +121,7 @@ public class ClassAndInterVisitor <T> extends Java8BaseVisitor<T> {
 		
 		MethodInfo mi = new MethodInfo();
 		mi.name = ctx.Identifier().getText();
+		mi.belongs = this.currentName;
 		if(!methods.containsKey(mi.name)){
 			methods.put(mi.name, mi);
 		}
