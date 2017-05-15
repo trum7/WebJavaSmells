@@ -46,6 +46,37 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 		return null;
 	}
 	
+
+	// --------------------------   INTERFACES  DECLARATIONS 
+	
+	@Override
+	public T visitInterfaceDeclaration(InterfaceDeclarationContext ctx) {
+		visitNormalInterfaceDeclaration(ctx.normalInterfaceDeclaration());
+		return null;
+	}
+	
+	@Override
+	public T visitNormalInterfaceDeclaration(NormalInterfaceDeclarationContext ctx) {	
+		visitInterfaceBody(ctx.interfaceBody());
+		return null;
+	}
+	
+	@Override
+	public T visitInterfaceBody(InterfaceBodyContext ctx) {
+		List<InterfaceMemberDeclarationContext> bodyDecl = ctx.interfaceMemberDeclaration();
+		for(InterfaceMemberDeclarationContext bd: bodyDecl){
+			visitInterfaceMemberDeclaration(bd);
+		}
+		return null;
+	}
+
+	@Override
+	public T visitInterfaceMemberDeclaration(InterfaceMemberDeclarationContext ctx) {
+		visitChildren(ctx);
+		return null;
+	}
+	
+	
 	// --------------------------   CLASSES DECLARATIONS 
 	@Override
 	public T visitClassDeclaration(ClassDeclarationContext ctx) {
@@ -182,6 +213,11 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	}
 	
 	//-------------------- METHOD DECLARATION 
+	@Override
+	public T visitInterfaceMethodDeclaration(InterfaceMethodDeclarationContext ctx) {
+		//visitMethodHeader(ctx.methodHeader());
+		return null;
+	}
 	@Override
 	public T visitMethodDeclaration(MethodDeclarationContext ctx) {
 		

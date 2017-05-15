@@ -2,14 +2,22 @@
 // implements
 // instancia
 
+public interface NameOfInterface {
+	public void metodoInterfazHello(){};
 
+   // Any number of abstract method declarations\
+}
+
+public interface Bye {
+
+}
 
 
 public class Saludo{
 	String a;
 	ArrayList hello;
 	Integer b;
-	
+
 	public void metodosaludo(){};
 	public int metodo2saludo(int j) {};
 }
