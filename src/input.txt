@@ -2,7 +2,22 @@
 // implements
 // instancia
 
-public interface NameOfInterface {
+public class Hello extends Saludo  {
+
+	String a;
+	ArrayList hello;
+	Integer b;
+	char j;
+	public void go( int a ){
+		//ne = 1 ;
+		//b = new ArrayList();
+		for(Integer g: u){
+		}
+	}
+}
+
+
+/*public interface NameOfInterface {
  public void metodoInterfazHello(){};
   }
 
@@ -33,7 +48,7 @@ public class Hello extends Saludo  {
 
 	String a;
 	ArrayList hello;
-	Integer b;
+	//Integer b;
 	char j;
 	public void go( int a ){
 		//ne = 1 ;
@@ -55,4 +70,4 @@ public class Hello extends Saludo  {
 		go();
 		metodosaludo();
 	}
-}
+}*/

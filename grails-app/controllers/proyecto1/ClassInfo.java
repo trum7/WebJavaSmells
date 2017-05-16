@@ -11,6 +11,7 @@ public class ClassInfo {
 	public HashMap<String,MethodInfo> methods ;
 	public ArrayList<String> extendsClass;
 	public ArrayList<String> implementInterfaces;
+	public ArrayList<String> referencesClasses;
 	
 	public ClassInfo(){
 		this.name = "NN";
@@ -20,13 +21,15 @@ public class ClassInfo {
 		this.methods= new HashMap<String,MethodInfo>();
 		this.extendsClass = new ArrayList<String>();
 		this.implementInterfaces = new ArrayList<String>();
+		this.referencesClasses = new ArrayList<String>();
 	}
 
 	@Override
 	public String toString() {
 		return "ClassInfo [name=" + name + ", length=" + length + ", attributes=" + attributes.toString()
 				+ ", primitiveAttributes=" + primitiveAttributes + ", methods=" + methods.toString() + ", extendsClass="
-				+ extendsClass.toString() + ", implementsInterfaces = "+implementInterfaces.toString() ;
+				+ extendsClass.toString() + ", implementsInterfaces = "+implementInterfaces.toString()
+				+", referencesClasses= " + referencesClasses.toString() ;
 	}
 
 	

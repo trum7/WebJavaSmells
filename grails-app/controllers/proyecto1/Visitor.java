@@ -16,6 +16,7 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	public HashMap<String,MethodInfo> methods;
 	public HashMap<String,MethodInfo> currMeth;
 	private String currentClass = "";
+	private boolean isAttribute = false;
 	
 	public Visitor(){
 		this.classes = new HashMap<String,ClassInfo>();
@@ -177,6 +178,27 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 		Boolean isNotPrimitive =false;
 		if(ctx.unannClassOrInterfaceType() != null || ctx.unannTypeVariable() != null){
 			isNotPrimitive = true;
+			String name = this.currentClass;
+			if(ctx.unannClassOrInterfaceType() != null){
+			
+					String classReference = ctx.unannClassOrInterfaceType().unannClassType_lfno_unannClassOrInterfaceType().Identifier().toString();
+					ClassInfo cInfo = classes.get(name);
+					if(!cInfo.referencesClasses.contains(classReference)){
+						cInfo.referencesClasses.add(classReference);
+					}
+				
+				
+			}else{
+				
+					String classReference = ctx.unannTypeVariable().Identifier().toString();
+					ClassInfo cInfo = classes.get(name);
+					if(!cInfo.referencesClasses.contains(classReference)){
+						cInfo.referencesClasses.add(classReference);
+					}
+				
+				
+			}
+			
 		}else{
 			isNotPrimitive = Boolean.parseBoolean(visitUnannArrayType(ctx.unannArrayType()).toString());
 		}
