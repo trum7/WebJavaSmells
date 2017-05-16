@@ -52,6 +52,11 @@ class AntlrController {
 		    while (it.hasNext()) {
 		        Map.Entry pair = (Map.Entry)it.next();
 				ClassInfo value = (ClassInfo) pair.getValue();
+				System.out.println("Class" + pair.getKey() );
+				System.out.println("Parents"+ " = " + value.extendsClass.toString());
+				System.out.println("Implements"+ " = " + value.implementInterfaces.toString());
+				System.out.println("References"+ " = " + value.referencesClasses.toString());
+		        System.out.println(pair.getKey() + " = " + pair.getValue().toString());
 		        it.remove(); // avoids a ConcurrentModificationException
 		    }
 
