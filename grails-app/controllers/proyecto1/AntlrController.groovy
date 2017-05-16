@@ -51,8 +51,7 @@ class AntlrController {
 		    Iterator it = (Iterator) classes.entrySet().iterator();
 		    while (it.hasNext()) {
 		        Map.Entry pair = (Map.Entry)it.next();
-		        
-		        System.out.println(pair.getKey() + " = " + pair.getValue().toString());
+				ClassInfo value = (ClassInfo) pair.getValue();
 		        it.remove(); // avoids a ConcurrentModificationException
 		    }
 
