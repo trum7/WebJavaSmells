@@ -26,10 +26,10 @@ public class ClassInfo {
 
 	@Override
 	public String toString() {
-		return "ClassInfo [name=" + name + ", length=" + length + ", attributes=" + attributes.toString()
-				+ ", primitiveAttributes=" + primitiveAttributes + ", methods=" + methods.toString() + ", extendsClass="
-				+ extendsClass.toString() + ", implementsInterfaces = "+implementInterfaces.toString()
-				+", referencesClasses= " + referencesClasses.toString() ;
+		return "ClassInfo: \n\tname=" + name + ",\n\tlength=" + length + ",\n\tattributes=" + attributes.toString()
+				+ ", \n\tprimitiveAttributes=" + primitiveAttributes + ", \n\tmethods=" + methods.toString() + ", \n\textendsClass="
+				+ extendsClass.toString() + ", \n\timplementsInterfaces = "+implementInterfaces.toString()
+				+", \n\treferencesClasses= " + referencesClasses.toString() ;
 	}
 
 	
