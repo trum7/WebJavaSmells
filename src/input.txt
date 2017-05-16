@@ -11,8 +11,9 @@ public class Hello extends Saludo  {
 	public void go( int a ){
 		//ne = 1 ;
 		//b = new ArrayList();
-		for(Integer g: u){
+		for(Double g: u){
 		}
+		Double  y = 3;
 	}
 }
 

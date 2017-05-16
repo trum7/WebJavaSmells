@@ -16,6 +16,7 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	public HashMap<String,MethodInfo> methods;
 	public HashMap<String,MethodInfo> currMeth;
 	private String currentClass = "";
+	private String classReference ="";
 	private boolean isAttribute = false;
 	
 	public Visitor(){
@@ -148,11 +149,16 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	public T visitFieldDeclaration(FieldDeclarationContext ctx) {
 		boolean noPrimitive = Boolean.parseBoolean( visitUnannType(ctx.unannType()).toString());
 		ArrayList ids = (ArrayList) visitVariableDeclaratorList(ctx.variableDeclaratorList());
+		String name = this.currentClass;
 		
 		for(int var= 0; var< ids.size(); var++){
 			Tuple tuple = (Tuple) ids.get(var);
 			if (noPrimitive){
-				this.attributes.put((String)tuple.t, (Integer)tuple.v);
+				this.attributes.put((String)tuple.t, (Integer)tuple.v);	
+				ClassInfo cInfo = classes.get(name);
+				if(!cInfo.referencesClasses.contains(classReference)){
+					cInfo.referencesClasses.add(classReference);
+				}
 			}else{
 				this.primitiveAttributes.put((String)tuple.t, (Integer)tuple.v);
 			}
@@ -180,23 +186,13 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 			isNotPrimitive = true;
 			String name = this.currentClass;
 			if(ctx.unannClassOrInterfaceType() != null){
-			
-					String classReference = ctx.unannClassOrInterfaceType().unannClassType_lfno_unannClassOrInterfaceType().Identifier().toString();
-					ClassInfo cInfo = classes.get(name);
-					if(!cInfo.referencesClasses.contains(classReference)){
-						cInfo.referencesClasses.add(classReference);
-					}
-				
-				
+				this.classReference = ctx.unannClassOrInterfaceType().unannClassType_lfno_unannClassOrInterfaceType().Identifier().toString();
 			}else{
-				
-					String classReference = ctx.unannTypeVariable().Identifier().toString();
-					ClassInfo cInfo = classes.get(name);
-					if(!cInfo.referencesClasses.contains(classReference)){
-						cInfo.referencesClasses.add(classReference);
-					}
-				
-				
+				this.classReference = ctx.unannTypeVariable().Identifier().toString();
+				//					ClassInfo cInfo = classes.get(name);
+				//					if(!cInfo.referencesClasses.contains(classReference)){
+				//						cInfo.referencesClasses.add(classReference);
+				//					}
 			}
 			
 		}else{
