@@ -21,11 +21,11 @@ public class Test {
 	public static HashMap<String,MethodInfo> methods;
 	public static void main(String[] args) throws Exception {
 		try{
-			
-			Test main = new Test(); 
-			
+
+			Test main = new Test();
+
 			System.setIn(new FileInputStream(new File("src/input.txt")));
-			ANTLRInputStream input = new ANTLRInputStream(System.in); 
+			ANTLRInputStream input = new ANTLRInputStream(System.in);
 			Java8Lexer lexer= new Java8Lexer(input);
 			// Identificar al analizador léxico como fuente de tokens para el sintactico
 			CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -34,26 +34,31 @@ public class Test {
 			ParseTree tree = parser.compilationUnit(); // begin parsing at init rule
 			ClassAndInterVisitor<Object> firstLoader = new ClassAndInterVisitor<Object>();
 			firstLoader.visit(tree);
-			
+
 			//Visitor<Object> loader = new Visitor<Object>();
 			Visitor<Object> loader = new Visitor<Object>(firstLoader.classes, firstLoader.interfaces);
-			
+
 			loader.visit(tree);
 //			System.out.println(tree.toStringTree(parser)); // print LISP-style tree
-			
+
 			lexemes = loader.lexemes;
 			attributes = loader.attributes;
 			classes = firstLoader.classes;
+
 			methods = loader.methods;
 //			System.out.println("Methods"+ methods.keySet());
 		    Iterator it = (Iterator) classes.entrySet().iterator();
 		    while (it.hasNext()) {
 		        Map.Entry pair = (Map.Entry)it.next();
+		        ClassInfo value = (ClassInfo) pair.getValue();
+		        System.out.println("Class" + pair.getKey() );
+		        System.out.println("Parents"+ " = " + value.extendsClass.toString());
+		        System.out.println("Implements"+ " = " + value.implementInterfaces.toString());
+		        System.out.println("References"+ " = " + value.referencesClasses.toString());
 		        
-		        System.out.println(pair.getKey() + " = " + pair.getValue().toString());
 		        it.remove(); // avoids a ConcurrentModificationException
 		    }
-	        
+
 
 	        try {
 	        	System.out.println("Si");
@@ -61,16 +66,16 @@ public class Test {
 	        } catch (Exception e) {
 	            System.err.println(e.getMessage());
 	        }
-	        
 
-			
-			
+
+
+
 		} catch (Exception e){
 			System.err.println("Error (Test): " + e.getLocalizedMessage());
 		}
 	}
-	
-	
+
+
 
     private void run() throws SQLException, ClassNotFoundException {
         Class.forName("com.mysql.jdbc.Driver");
@@ -87,12 +92,12 @@ public class Test {
         System.out.println("Searching for example user.");
         boolean exampleUserFound = false;*/
         ArrayList<String> words = new ArrayList<String>();
-        
+
         while (resultSet.next()) {
             words.add(resultSet.getString("lexeme"));
         }
         ArrayList<String> notMatchAttributes = new ArrayList<String>();
-        
+
 	    Iterator it = (Iterator) attributes.entrySet().iterator();
 	    boolean found = false;
 	    while ( it.hasNext() ) {
@@ -100,20 +105,20 @@ public class Test {
 	        Map.Entry pair = (Map.Entry)it.next();
 	        String search = pair.getKey().toString();
 	        System.out.println(pair.getKey() + " = " + pair.getValue());
-	        
+
 	        for(String word : words){
-	        	
+
 	        	String s = "hello world i am from heaven";
 	        	if (search.indexOf(word) != -1) {
 	        	  found = true;
 	        	  System.out.println("Encontro a: " + search + " Con la palabra: " + word);
 	        	  break;
 	        	}
-	        	
+
 	        }
-	        
+
 	        if( !found ){
-	        	notMatchAttributes.add(search);	        	
+	        	notMatchAttributes.add(search);
 	        }
 	        it.remove(); // avoids a ConcurrentModificationException
 	    }
@@ -123,5 +128,5 @@ public class Test {
         System.out.println("Finalizo");
 
     }
-	
+
 }
