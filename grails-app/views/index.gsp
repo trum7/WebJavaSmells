@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title>Hydrocarbon</title>
+     <title>JavaSmells</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
   
@@ -96,28 +96,33 @@
    	<div class="row section-intro">
    		<div class="col-twelve with-bottom-line">
 
-   			<h5>Caracteristicas</h5>
-   			<h1>¿Que hace a Ruby ser tan excelente?</h1>
+   			<h5>Tester</h5>
+   			<h1>¿Are you a good programmer?</h1>
 
    		</div>
    	</div>
 
    	<div>
    	
+   	<div class="row" align="center">
+   	<div class="col-sm-2"></div>
    	
-   	                        <g:form controller="antlr" action="index">
-                            <div class="form-group">
-                                <div class="col-md-12" style="margin-bottom : 5px">
-                                    <g:textArea name="code" placeholder= "Codigo"/>
-                                </div>
+   	<div class="col-sm-8">
+                  <g:form controller="antlr" action="index">
+                  <div class="form-group">
+                      <div class="col-md-12" style="margin-bottom : 5px">
+                          <g:textArea name="code" placeholder= "Codigo"/ cols="100"></g:textArea>
+                      </div>
 
-                                <div class="col-md-6" style="margin-bottom : 5px; text-align : right">
-                                    <!--  <button class="btn btn-primary" type="submit">Log in</submit> -->
-                                    <label>&nbsp;</label><input type="submit" name="Login"/>
-                                </div>
-                            </div>
-                        </g:form>
-   	
+                      <div class="col-md-6" style="margin-bottom : 5px; text-align : right">
+                          <!--  <button class="btn btn-primary" type="submit">Log in</submit> -->
+                          <label>&nbsp;</label><input type="submit" name="Login"/>
+                      </div>
+                  </div>
+              </g:form>
+      </div>     
+     <div class="col-sm-2"></div>
+   	</div>
    	
    	
    	</div>
