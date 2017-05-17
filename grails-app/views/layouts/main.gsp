@@ -22,8 +22,56 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+        function main () {
+            // This demo shows how to create an SVG node which is a bit more complex
+            // than single image. Do accomplish this we use 'g' element and
+            // compose group of elements to represent a node.
+            var graph = Viva.Graph.graph();
+            var graphics = Viva.Graph.View.svgGraphics(),
+                nodeSize = 24;
+            //Definicion nodos
+            graph.addNode('anvaka');
+            graph.addNode('indexzero');
+
+            //Definicion links
+            graph.addLink('anvaka', 'indexzero');
+
+
+            
+            graphics.node(function(node) {
+              // This time it's a group of elements: http://www.w3.org/TR/SVG/struct.html#Groups
+              var ui = Viva.Graph.svg('g'),
+                  // Create SVG text element with user id as content
+                  svgText = Viva.Graph.svg('text').attr('y', '-4px').text(node.id),
+                  img = Viva.Graph.svg('image')
+                     .attr('width', nodeSize)
+                     .attr('height', nodeSize)
+                     .link('../assets/javaClass.png');
+              ui.append(svgText);
+              ui.append(img);
+              return ui;
+            }).placeNode(function(nodeUI, pos) {
+                // 'g' element doesn't have convenient (x,y) attributes, instead
+                // we have to deal with transforms: http://www.w3.org/TR/SVG/coords.html#SVGGlobalTransformAttribute
+                nodeUI.attr('transform',
+                            'translate(' +
+                                  (pos.x - nodeSize/2) + ',' + (pos.y - nodeSize/2) +
+                            ')');
+            });
+            // Render the graph
+            var renderer = Viva.Graph.View.renderer(graph, {
+                    graphics : graphics
+                });
+            renderer.run();
+        }
+    </script>
+
+    <style type="text/css" media="screen">
+        html, body, svg { width: 100%; height: 100%;}
+    </style>
   </head>
-  <body>
+  <body onload="main()">
     <!-- Fixed navbar -->
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -61,7 +109,7 @@
 	<div class="container theme-showcase" role="main">
     	<g:layoutBody/>
 	</div>
-
+	<script src="${assetPath(src: 'vivagraph.js')}"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
