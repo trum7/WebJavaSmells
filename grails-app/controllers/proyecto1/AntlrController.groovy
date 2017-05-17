@@ -70,6 +70,8 @@ class AntlrController {
 			session.lexemes = loader.lexemes;
 			session.attributes = loader.attributes;
 			session.classes = firstLoader.classes;
+			session.interfaces = loader.interfaces;
+			session.methods = loader.methods;
 			
 			
 		} catch (Exception e){

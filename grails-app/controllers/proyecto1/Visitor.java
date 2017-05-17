@@ -20,6 +20,7 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	private boolean isAttribute = false;
 	
 	public Visitor(){
+		
 		this.classes = new HashMap<String,ClassInfo>();
 		this.interfaces = new HashMap<String,InterfaceInfo>();
 		this.methods = new HashMap<String,MethodInfo>();
