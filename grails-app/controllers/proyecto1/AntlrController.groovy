@@ -48,7 +48,7 @@ class AntlrController {
 			classes = firstLoader.classes;
 //			methods = loader.methods;
 //			System.out.println("Methods"+ methods.keySet());
-		    Iterator it = (Iterator) classes.entrySet().iterator();
+		    /*Iterator it = (Iterator) classes.entrySet().iterator();
 		    while (it.hasNext()) {
 		        Map.Entry pair = (Map.Entry)it.next();
 				ClassInfo value = (ClassInfo) pair.getValue();
@@ -58,7 +58,7 @@ class AntlrController {
 				System.out.println("References"+ " = " + value.referencesClasses.toString());
 		        System.out.println(pair.getKey() + " = " + pair.getValue().toString());
 		        it.remove(); // avoids a ConcurrentModificationException
-		    }
+		    }*/
 
 			/*try {
 				System.out.println("Si");
@@ -67,14 +67,16 @@ class AntlrController {
 				System.err.println(e.getMessage());
 			}*/
 			
-
+			session.lexemes = loader.lexemes;
+			session.attributes = loader.attributes;
+			session.classes = firstLoader.classes;
 			
 			
 		} catch (Exception e){
 			System.err.println("Error (Test): " + e);
 		}
-		
-		redirect(url: "/")
+
+		redirect (controller: "webreport", action: 'index')
 		
 		
 	}
