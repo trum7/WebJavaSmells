@@ -384,7 +384,7 @@
   		  
   		  <g:each in="${methodlength}" var="p">
 			<tr>
-			<g:if test="${p.length < 5}">
+			<g:if test="${p.paramNum < 5}">
 			    <td bgcolor="#00FF00">${p.name}</td>
 			    <td bgcolor="#00FF00">${p.belongs}</td>
 				<td bgcolor="#00FF00">${p.paramNum}</td>
