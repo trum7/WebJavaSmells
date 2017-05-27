@@ -391,6 +391,14 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	
 	@Override
 	public T visitMethodInvocation(MethodInvocationContext ctx) {
+		String methodName = ctx.getText();
+		String[] separated = methodName.split("\\.");
+		if (separated.length > 3) {
+			ClassInfo classI = this.classes.get(currentClass);
+			classI.messageChain+=1;
+			
+		}
+		
 		visitChildren(ctx);
 		return null ;
 	}
