@@ -86,9 +86,14 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 		String name = ctx.normalClassDeclaration().Identifier().getText();
 		if(classes.containsKey(name)){
 			this.currentClass =  name;
-			this.attributes = classes.get(name).attributes;
-			this.primitiveAttributes = classes.get(name).primitiveAttributes;
-			this.currMeth = classes.get(name).methods;
+			ClassInfo classI= classes.get(name);
+			this.attributes = classI.attributes;
+			this.primitiveAttributes = classI.primitiveAttributes;
+			this.currMeth = classI.methods;
+			int sgMethods = classI.setGetter;
+			if(sgMethods == currMeth.size()){
+				classI.isDataClass = true;
+			}
 		}	
 		visitNormalClassDeclaration(ctx.normalClassDeclaration());
 		return null;

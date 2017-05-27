@@ -35,7 +35,7 @@ public class Saludo{
 	public void metodosaludo(){};
 	public int metodo2saludo(int j) {};
 }
-public class Hallo extends Saludo implements Hello , Bye{
+public class Hallo extends Saludo implements Bye{
 	String z;
 	ArrayList shshs;
 	Integer tttttt;
@@ -68,7 +68,7 @@ public class Hello extends Saludo  {
 	}
 
 	public void callGo( ){
-		go();
+		go(1);
 		metodosaludo();
 	}
 }*/
