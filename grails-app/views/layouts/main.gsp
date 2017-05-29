@@ -451,12 +451,27 @@
   	</div>
 
     <br>
-  	<div class="col-sm-12">
-  	<div class="col-sm-1"></div>
-  	<div class="col-sm-8">
-  		<h3>Incorrect name variables</h3>
-  	</div>
-  	</div>
+    <div class="col-sm-12">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <h3>Incorrect variable names</h3>
+        <div class="col-sm-12" align="center">
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Number of appearances </th>
+            </tr>
+             <g:each in="${varNames}" var="p">
+            <tr>
+              <td bgcolor=#ffc61a>${p.name}</td>
+              <td bgcolor="#ffc61a">${p.count}</td>
+            </tr>
+            </g:each>
+          </table>
+        </div>
+      </div>
+     <div class="col-sm-1"></div>
+    </div>
 
 
 

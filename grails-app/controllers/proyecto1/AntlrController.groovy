@@ -14,6 +14,7 @@ import org.antlr.v4.runtime.tree.ParseTree;
 class AntlrController {
 
 	public static HashMap<String,Integer> lexemes;
+	public static HashMap<String,Integer> wrongName;
 	public static HashMap<String,Integer> attributes;
 	public static HashMap<String,Integer> classes;
 
@@ -44,16 +45,8 @@ class AntlrController {
 			attributes = loader.attributes;
 			classes = firstLoader.classes;
 
-			badName()
-
-
-//			if (words != null){
-//				println "HOLAAAAAAAA"
-//				println words.count()
-//				badName(words)
-//				//352956
-//				//354267
-//			}
+			wrongName = badName()
+			
 //			methods = loader.methods;
 //			System.out.println("Methods"+ methods.keySet());
 		    /*Iterator it = (Iterator) classes.entrySet().iterator();
@@ -80,6 +73,7 @@ class AntlrController {
 			session.classes = firstLoader.classes;
 			session.interfaces = loader.interfaces;
 			session.methods = loader.methods;
+			session.wrongName = wrongName;
 
 
 		} catch (Exception e){
@@ -90,9 +84,9 @@ class AntlrController {
 
 	}
 
-	def private badName(){
+	def private HashMap badName(){
 		def words =  Word.executeQuery("Select word from Word where length(word) > 2 ")
-		ArrayList<String> notMatchAttributes = new ArrayList<String>();
+		HashMap<String,Integer> notMatchAttributes = new HashMap<String,Integer>();
 		ArrayList<String> dbWords = new ArrayList<String>();
 		for (w in words) {
 //			println w.word
@@ -105,6 +99,7 @@ class AntlrController {
 			found = false;
 			Map.Entry pair = (Map.Entry)it.next();
 			String search = pair.getKey().toString();
+			int count = (int) pair.getValue();
 			char lastChar = search.charAt(search.size()-1)
 			boolean isNumeric = (search.charAt(search.size()-1).isDigit(lastChar))
 			println "Is numeric " + isNumeric 
@@ -122,7 +117,7 @@ class AntlrController {
 			}
 			
 			if( !found ){
-				notMatchAttributes.add(search);
+				notMatchAttributes.put(search, count);
 			}
 			it.remove(); // avoids a ConcurrentModificationException
 		}
@@ -131,6 +126,8 @@ class AntlrController {
 			System.out.println(a);
 		}
 		System.out.println("Finalizo");
+		return notMatchAttributes
 	}
+	
 
 }

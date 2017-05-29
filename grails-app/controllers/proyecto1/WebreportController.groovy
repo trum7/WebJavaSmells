@@ -21,6 +21,8 @@ class WebreportController {
 			int o = 0;
 			ArrayList<LengthClass> lc = new ArrayList<LengthClass>();
 			ArrayList<MethodLength> ml = new ArrayList<MethodLength>();
+			ArrayList<VarNames> vn = new ArrayList<VarNames>();
+			
 		    Iterator it = (Iterator) session.classes.entrySet().iterator();
 		    while (it.hasNext()) {
 				int a = i;
@@ -167,11 +169,25 @@ class WebreportController {
 				
 			}
 			
+			//Nombres no comunicativos
+			
+			Iterator it3 = (Iterator) session.wrongName.entrySet().iterator();
+			while (it3.hasNext()) {
+//				int a = i;
+				Map.Entry pair = (Map.Entry)it3.next();
+				int value = (int) pair.getValue();
+				System.out.println(pair.getKey());
+				VarNames vntemp = new VarNames();
+				vntemp.name = pair.getKey();
+				vntemp.count = value; 
+				vn.add(vntemp);		
+				
+			}
 			
 			
 			
 			
-			[a:cla1,b:name,c:attr,d:inter,e:imple,largeClass:lc,methodlength:ml]
+			[a:cla1,b:name,c:attr,d:inter,e:imple,largeClass:lc,methodlength:ml, varNames :vn]
 			
 	}
 	
