@@ -4,13 +4,13 @@
 
 public class Hello extends Saludo  {
 
-	String a;
+	String all1;
 	ArrayList hello;
-	Integer b;
-	char j;
+	Integer zzz;
+	//String jason;
 	public void go( int a ){
 		//ne = 1 ;
-		//b = new ArrayList();
+		b = new ArrayList();
 		for(Double g: u){
 		}
 		Double  y = 3;

@@ -17,7 +17,6 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	public HashMap<String,MethodInfo> currMeth;
 	private String currentClass = "";
 	private String classReference ="";
-	private boolean isAttribute = false;
 	
 	public Visitor(){
 		

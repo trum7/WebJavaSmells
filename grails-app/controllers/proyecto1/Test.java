@@ -82,7 +82,8 @@ public class Test {
         Class.forName("com.mysql.jdbc.Driver");
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/javacodesmells?user=root&password=root&zeroDateTimeBehavior=convertToNull");
         Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM javacodesmells.word");
+        ResultSet resultSet = statement.executeQuery("SELECT word FROM javacodesmells.word where length(word) <= 2");
+        System.out.println(resultSet.getRow());
         //System.out.println("Printing schema for table: " + resultSet.getMetaData().getTableName(1));
         //int columnCount = resultSet.getMetaData().getColumnCount();
 
@@ -107,12 +108,17 @@ public class Test {
 	        Map.Entry pair = (Map.Entry)it.next();
 	        String search = pair.getKey().toString();
 	        System.out.println(pair.getKey() + " = " + pair.getValue());
-
+	        
 	        for(String word : words){
-
+	        	 
 	        	String s = "hello world i am from heaven";
-	        	if (search.indexOf(word) != -1) {
+//	        	System.out.println("Index of word"+ search.indexOf(word)); 
+	        	if (search.indexOf(word) != -1 ) {
 	        	  found = true;
+	        	  if (word != null){
+	        		  System.out.println("Hello I am in the db "+ word);
+	        	  }
+	        	  
 	        	  System.out.println("Encontro a: " + search + " Con la palabra: " + word);
 	        	  break;
 	        	}
@@ -125,6 +131,7 @@ public class Test {
 	        it.remove(); // avoids a ConcurrentModificationException
 	    }
         for(String a: notMatchAttributes){
+        	System.out.println("Not found ");
         	System.out.println(a);
         }
         System.out.println("Finalizo");
