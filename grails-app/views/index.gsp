@@ -98,7 +98,6 @@
 
    			<h5>Tester</h5>
    			<h1>¿Are you a good programmer?</h1>
-
    		</div>
    	</div>
 

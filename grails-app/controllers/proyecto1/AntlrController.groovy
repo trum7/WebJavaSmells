@@ -16,16 +16,21 @@ class AntlrController {
 	public static HashMap<String,Integer> attributes;
 	public static HashMap<String,Integer> classes;
 	
-    def index() {
-		
+	def index() {
 		
 		try{
 			
-			Test main = new Test();
-			
+			Test main = new Test()
+			Word words = Word.findByWord("aah")
 			String input1 = params.code;
-			println input1;
-			
+			if (words != null){
+				println "HOLAAAAAAAA"
+				println words.count()
+				println words.last().id
+				//352956
+				//354267
+			}
+//			println input1;
 //			System.setIn(new FileInputStream(new File("src/input.txt")));
 			ANTLRInputStream input = new ANTLRInputStream(input1);
 			Java8Lexer lexer= new Java8Lexer(input);

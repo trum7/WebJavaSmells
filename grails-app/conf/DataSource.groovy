@@ -1,3 +1,5 @@
+
+
 dataSource {
     pooled = true
     driverClassName = "com.mysql.jdbc.Driver"
@@ -25,8 +27,10 @@ environments {
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
 			//url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
-            url = "jdbc:mysql://127.0.0.1:3306/hydrocarbon?autoreconnect=true"
+            url = "jdbc:mysql://127.0.0.1:3306/javacodesmells?autoreconnect=true"
 			//url = "jdbc:mysql://127.2.146.2:3306/hydrocarbon?autoreconnect=true"
+		
+			
         }
     }
     test {

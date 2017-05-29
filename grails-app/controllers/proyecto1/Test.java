@@ -2,6 +2,7 @@ package proyecto1;
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
+import org.apache.poi.ss.formula.functions.T;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -35,8 +36,8 @@ public class Test {
 			ClassAndInterVisitor<Object> firstLoader = new ClassAndInterVisitor<Object>();
 			firstLoader.visit(tree);
 
-			//Visitor<Object> loader = new Visitor<Object>();
-			Visitor<Object> loader = new Visitor<Object>(firstLoader.classes, firstLoader.interfaces);
+			Visitor<Object> loader = new Visitor<Object>();
+//			Visitor<T> loader = new Visitor<T>(firstLoader.classes, firstLoader.interfaces);
 
 			loader.visit(tree);
 //			System.out.println(tree.toStringTree(parser)); // print LISP-style tree
@@ -79,9 +80,9 @@ public class Test {
 
     private void run() throws SQLException, ClassNotFoundException {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/words?user=root&password=root&zeroDateTimeBehavior=convertToNull");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/javacodesmells?user=root&password=root&zeroDateTimeBehavior=convertToNull");
         Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM words.word");
+        ResultSet resultSet = statement.executeQuery("SELECT * FROM javacodesmells.word");
         //System.out.println("Printing schema for table: " + resultSet.getMetaData().getTableName(1));
         //int columnCount = resultSet.getMetaData().getColumnCount();
 
@@ -94,8 +95,9 @@ public class Test {
         ArrayList<String> words = new ArrayList<String>();
 
         while (resultSet.next()) {
-            words.add(resultSet.getString("lexeme"));
+            words.add(resultSet.getString("word"));
         }
+        System.out.println(words.size());
         ArrayList<String> notMatchAttributes = new ArrayList<String>();
 
 	    Iterator it = (Iterator) attributes.entrySet().iterator();
