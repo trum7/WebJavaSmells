@@ -9,6 +9,7 @@ public class ClassInfo {
 	public int setGetter;
 	public boolean isDataClass;
 	public int messageChain;
+	public int count;
 	public HashMap<String,Integer> attributes ;
 	public HashMap<String,Integer> primitiveAttributes ;
 	public HashMap<String,MethodInfo> methods ;
@@ -22,6 +23,7 @@ public class ClassInfo {
 		this.setGetter = 0;
 		this.isDataClass = false;
 		this.messageChain = 0 ;
+		this.count = 0;
 		this.attributes = new HashMap<String,Integer>();
 		this.primitiveAttributes = new HashMap<String,Integer>();
 		this.methods= new HashMap<String,MethodInfo>();
@@ -34,8 +36,8 @@ public class ClassInfo {
 	public String toString() {
 		return "ClassInfo: \n\tname=" + name + ",\n\tlength=" + length + ",\n\tattributes=" + attributes.toString()
 				+ ", \n\tprimitiveAttributes=" + primitiveAttributes + ", \n\tmethods=" + methods.toString() 
-				+ "\n\tIs data class= "+ isDataClass + "\n\tMessageChain="+ messageChain+", \n\textendsClass="
-				+ extendsClass.toString() + ", \n\timplementsInterfaces = "+implementInterfaces.toString()
+				+ "\n\tIs data class= "+ isDataClass + "\n\tMessageChain="+ messageChain +"\n\tCount= " + count 
+				+", \n\textendsClass="+ extendsClass.toString() + ", \n\timplementsInterfaces = "+implementInterfaces.toString()
 				+", \n\treferencesClasses= " + referencesClasses.toString() ;
 	}
 

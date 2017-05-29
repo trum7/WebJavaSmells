@@ -8,6 +8,6 @@ class LengthClass {
 	public int totalMethods;
 	public int setGetter;
 	public boolean isDataClass;
-	public int count;
+	public int countAp;
 	
 }

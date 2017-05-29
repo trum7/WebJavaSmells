@@ -96,6 +96,7 @@ class WebreportController {
 				lctemp.totalMethods = value.methods.size();
 				lctemp.setGetter = value.setGetter;
 				lctemp.isDataClass = value.isDataClass;
+				lctemp.countAp = value.count;
 				lc.add(lctemp);
 				
 				

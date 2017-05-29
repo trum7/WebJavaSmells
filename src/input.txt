@@ -54,9 +54,11 @@ public class Hello extends Saludo  {
 	ArrayList hello;
 	//Integer b;
 	char j;
+	
 	public void go( int a ){
 		//ne = 1 ;
 		//b = new ArrayList();
+		Hallo hel; 
 		for(Integer g: u){
 			while(true){
 				hello.this.g.h.add();

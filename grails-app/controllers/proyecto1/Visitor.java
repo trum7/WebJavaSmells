@@ -109,6 +109,7 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 			if(ctx.superclass() != null){
 				String parent = ctx.superclass().classType().Identifier().getText();
 				cInfo.extendsClass.add(parent);
+				addCount(parent);
 			}
 			if (ctx.superinterfaces() != null){
 				List<InterfaceTypeContext> interfaces = ctx.superinterfaces().interfaceTypeList().interfaceType();
@@ -118,8 +119,8 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 			}
 			classes.put(name, cInfo);		
 		}
-		System.out.println(classes.keySet().toString());
-		System.out.printf("Longitud Clase: %d \n",classes.get(name).length );
+//		// System.out.println(classes.keySet().toString());
+//		// System.out.printf("Longitud Clase: %d \n",classes.get(name).length );
 		
 		
 		return null;
@@ -131,7 +132,7 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	
 		List<ClassBodyDeclarationContext> bodyDecl = ctx.classBodyDeclaration();
 		int classLong = ctx.getStop().getLine()-ctx.getStart().getLine()-1;
-//		System.out.printf("Longitud Clase: %d \n",classLong );
+//		// System.out.printf("Longitud Clase: %d \n",classLong );
 		for(ClassBodyDeclarationContext bd: bodyDecl){
 			visitClassBodyDeclaration(bd);
 		}
@@ -168,8 +169,8 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 			}else{
 				this.primitiveAttributes.put((String)tuple.t, (Integer)tuple.v);
 			}
-//			System.out.println("ATTRIBUTES");
-//			System.out.println((String) tuple.t);
+//			// System.out.println("ATTRIBUTES");
+//			// System.out.println((String) tuple.t);
 		}		
 				
 		return null;
@@ -193,8 +194,10 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 			String name = this.currentClass;
 			if(ctx.unannClassOrInterfaceType() != null){
 				this.classReference = ctx.unannClassOrInterfaceType().unannClassType_lfno_unannClassOrInterfaceType().Identifier().toString();
+				addCount(this.classReference);
 			}else{
 				this.classReference = ctx.unannTypeVariable().Identifier().toString();
+				addCount(this.classReference);
 				//					ClassInfo cInfo = classes.get(name);
 				//					if(!cInfo.referencesClasses.contains(classReference)){
 				//						cInfo.referencesClasses.add(classReference);
@@ -206,6 +209,8 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 		}
 		return (T) isNotPrimitive.toString();
 	}
+	
+	
 	@Override
 	public T visitUnannArrayType(UnannArrayTypeContext ctx) {
 		Boolean isNotPrimitive = (ctx.unannPrimitiveType() != null) ? false : true;	
@@ -264,7 +269,7 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 		
 		int tmp = ctx.getStop().getLine() - ctx.getStart().getLine();
 		int TotalLines =(ctx.block().blockStatements()!= null) ? tmp: 1;
-		System.out.printf("Lineas totales en el metodo %d \n",TotalLines-1);
+//		// System.out.printf("Lineas totales en el metodo %d \n",TotalLines-1);
 		visitBlock(ctx.block());
 		return (T)(Integer) TotalLines;
 	}
@@ -287,11 +292,11 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 			numParams = Integer.parseInt(visitFormalParameterList(ctx.formalParameterList()).toString());
 			mi.paramNum = numParams;
 			currentMethod.paramNum = numParams;
-			System.out.printf("Cantidad de params %d \n",numParams);
+			// System.out.printf("Cantidad de params %d \n",numParams);
 		}else{
 			mi.paramNum = numParams;
 			currentMethod.paramNum = numParams;
-			System.out.printf("Cantidad de params %d \n",numParams);	
+			// System.out.printf("Cantidad de params %d \n",numParams);	
 		}
 		return (T) mi;
 	}
@@ -329,33 +334,33 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	
 	@Override
 	public T visitStatement(StatementContext ctx) {
-		// System.out.println("ENTREEEEEE 1");
+		// // System.out.println("ENTREEEEEE 1");
 		visitChildren(ctx);
 		return null;
 	}
 	@Override
 	public T visitStatementWithoutTrailingSubstatement(StatementWithoutTrailingSubstatementContext ctx) {
-		// System.out.println("ENTREEEEEE 2");
+		// // System.out.println("ENTREEEEEE 2");
 		visitChildren(ctx);
 		return null;
 	}
 	
 	@Override
 	public T visitExpressionStatement(ExpressionStatementContext ctx) {
-		// System.out.println("ENTREEEEEE 3 ");
+		// // System.out.println("ENTREEEEEE 3 ");
 		visitChildren(ctx);
 		return null;
 	}
 	@Override
 	public T visitAssignment(AssignmentContext ctx) {
-		// System.out.println("ENTREEEEEE 4 ");
+		// // System.out.println("ENTREEEEEE 4 ");
 		visitLeftHandSide(ctx.leftHandSide());
 		return null;
 	}
 	
 	@Override
 	public T visitLeftHandSide(LeftHandSideContext ctx) {
-		// System.out.println("ENTREEEEEE 5 ");
+		// // System.out.println("ENTREEEEEE 5 ");
 		visitChildren(ctx);
 		return null;
 	}
@@ -365,13 +370,13 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 		if(attributes.containsKey(name)){
 			int count = this.attributes.get(name);
 			this.attributes.put(name, count+1);
-			System.out.println("NAME 1 " + name);
-			System.out.println(this.attributes.get(name));
+			// System.out.println("NAME 1 " + name);
+			// System.out.println(this.attributes.get(name));
 		}else if(primitiveAttributes.containsKey(name)){
 			int count = primitiveAttributes.get(name);
 			this.primitiveAttributes.put(name, count+1);
-			System.out.println("NAME 2 " + name);
-			System.out.println(this.attributes.get(name));
+			// System.out.println("NAME 2 " + name);
+			// System.out.println(this.attributes.get(name));
 		}
 		return null;
 	}
@@ -419,9 +424,9 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 				}
 			}	
 			this.methods.put(name, mi);	
-			System.out.println(this.methods.get(name).toString());
+			// System.out.println(this.methods.get(name).toString());
 		}
-		System.out.println(methods.toString());
+		// System.out.println(methods.toString());
 		return null;
 	}
 	
@@ -451,13 +456,19 @@ public class Visitor<T> extends Java8BaseVisitor<T>{
 	}
 //--------------- Helper Methods 
 	
-private void checkExistence(String name){
-	 if(attributes.containsKey(name)){
-		int count = attributes.get(name);
-		this.attributes.put(name, count+1);
+	private void checkExistence(String name){
+		 if(attributes.containsKey(name)){
+			int count = attributes.get(name);
+			this.attributes.put(name, count+1);
+		}
+		// System.out.println("Method invocation:" +name);
 	}
-	System.out.println("Method invocation:" +name);
-}
-	
+	private void addCount(String name ){
+		if(this.classes.containsKey(name)){
+			ClassInfo classI = classes.get(name);
+			classI.count+=1;
+		}
+	}
+		
 
 }

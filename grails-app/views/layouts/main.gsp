@@ -326,12 +326,36 @@
   	</div>
 
     <br>
-  	<div class="col-sm-12">
-  	<div class="col-sm-1"></div>
-  	<div class="col-sm-8">
-  		<h3>Lazy class</h3>
-  	</div>
-  	</div>
+    <div class="col-sm-12">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <h3>Lazy Class</h3>
+        <div class="col-sm-12" align="center">
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Number of instances </th>
+            </tr>
+             <g:each in="${largeClass}" var="p">
+            <tr>
+              <g:if test="${p.countAp > 0}">
+              <script type="text/javascript">
+                alert("FUNCIONA")
+              </script>
+                <td bgcolor="#00FF00">${p.name}</td>
+                <td bgcolor="#00FF00">${p.countAp}</td>
+              </g:if>
+              <g:else>
+                  <td bgcolor="#FF0000">${p.name}</td>
+                <td bgcolor="#FF0000">${p.countAp}</td>
+              </g:else>
+            </tr>
+            </g:each>
+          </table>
+        </div>
+      </div>
+     <div class="col-sm-1"></div>
+    </div>
 
     <br>
     <div class="col-sm-12">
