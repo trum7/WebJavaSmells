@@ -40,25 +40,25 @@
 
             	graph.addNode(b[i]);
 				i++;
-				
+
             }
 			i = 0;
             while(i<d.length){
-                
+
 				if( d[i] != null ){
 	            	graph.addNode(d[i]);
 					i++;
 				}else{
 					break;
 				}
-				
+
             }
 
 
 
 
 			//Aca
-			
+
 			            // To render an arrow we have to address two problems:
 			            //  1. Links should start/stop at node's bounding box, not at the node center.
 			            //  2. Render an arrow shape at the end of the link.
@@ -75,19 +75,19 @@
 			                .attr('markerHeight', "5")
 			                .attr('orient', "auto");
 			},
-			
+
 			marker = createMarker('Triangle');
 			marker.append('path').attr('d', 'M 0 0 L 10 5 L 0 10 z');
-			
+
 			var defs = graphics.getSvgRoot().append('defs');
 			defs.append(marker);
-			
+
 			var geom = Viva.Graph.geom();
-			
+
 			graphics.link(function(link){
 			    var label = Viva.Graph.svg('text').attr('id','label_'+link.data.id).text(link.data.id);
 			            	        graphics.getSvgRoot().childNodes[0].append(label);
-			    
+
 			    return Viva.Graph.svg('path')
 			        .attr('stroke', 'gray')
 			        .attr('marker-end', 'url(#Triangle)')
@@ -95,7 +95,7 @@
 			    }).placeLink(function(linkUI, fromPos, toPos) {
 			        var toNodeSize = nodeSize,
 			        fromNodeSize = nodeSize;
-			
+
 			        var from = geom.intersectRect(
 			            fromPos.x - fromNodeSize / 2, // left
 			            fromPos.y - fromNodeSize / 2, // top
@@ -103,7 +103,7 @@
 			            fromPos.y + fromNodeSize / 2, // bottom
 			            fromPos.x, fromPos.y, toPos.x, toPos.y)
 			        || fromPos;
-			
+
 			        var to = geom.intersectRect(
 			            toPos.x - toNodeSize / 2, // left
 			            toPos.y - toNodeSize / 2, // top
@@ -112,25 +112,25 @@
 			            // segment:
 			            toPos.x, toPos.y, fromPos.x, fromPos.y)
 			            || toPos;
-			
+
 			        var data = 'M' + from.x + ',' + from.y +
 			            'L' + to.x + ',' + to.y;
-			
+
 			        linkUI.attr("d", data);
-			    
+
 			        document.getElementById('label_'+linkUI.attr('id'))
 			                	.attr("x", (from.x + to.x) / 2)
 			                	.attr("y", (from.y + to.y) / 2);
 			    });
 			//Aca
 
-            
-            
+
+
             graphics.node(function(node) {
               // This time it's a group of elements: http://www.w3.org/TR/SVG/struct.html#Groups
               var result = d.indexOf(node.id)
               if(result == -1){
-                  
+
               var ui = Viva.Graph.svg('g'),
                   // Create SVG text element with user id as content
                   svgText = Viva.Graph.svg('text').attr('y', '-4px').text(node.id),
@@ -170,7 +170,7 @@
 
             	graph.addLink(a[i], a[i+1], {id : 'extends'});
 				i += 2;
-				
+
             }
 			i = 0;
             while(i<c.length){
@@ -183,7 +183,7 @@
             	}else{
 					break;
                 }
-				
+
             }
 
             i = 0;
@@ -197,12 +197,12 @@
             	}else{
 					break;
                 }
-				
+
             }
 
 
-            
-            
+
+
             // Render the graph
             var renderer = Viva.Graph.View.renderer(graph, {
                     graphics : graphics
@@ -214,7 +214,7 @@
     <style type="text/css" media="screen">
         html, body, svg { width: 100%; height: 100%;}
     </style>
-    
+
     <style>
 		table {
 		    font-family: arial, sans-serif;
@@ -222,19 +222,19 @@
 		    width: 100%;
 		    border: 1px solid black;
 		}
-		
-		th{		    
+
+		th{
 			border: 1px solid black;
-			background-color: white;	
+			background-color: white;
 		    text-align: center;
 		    padding: 8px;
-		} 
+		}
 		td{
 		    border: 1px solid black;
 		    text-align: center;
 		    padding: 8px;
 		}
-		
+
 		tr:nth-child(even) {
 		    background-color: #dddddd;
 		}
@@ -263,156 +263,181 @@
 
 	<div class="row">
 
-	<div class="col-sm-12" align="center"><h1>Final Report</h1></div>
-	<br>
-	<div class="col-sm-12">
-	<div class="col-sm-1"></div>
-	<div class="col-sm-8">
-		<h3>Incorrect name variables</h3>
-	</div>
-	</div>
-	
-	
-	<br>
-	<div class="col-sm-12">
-	<div class="col-sm-1"></div>
-	<div class="col-sm-10">
-		<h3>Long Method</h3>
-		<div class="col-sm-12" align="center">	
-		<table>
-		  <tr>
-		    <th>Name</th>
-		    <th>Belongs</th>
-		    <th>Length</th>
-		  </tr>
-  		  
-  		  <g:each in="${methodlength}" var="p">
-			<tr>
-			<g:if test="${p.length < 40}">
-			    <td bgcolor="#00FF00">${p.name}</td>
-			    <td bgcolor="#00FF00">${p.belongs}</td>
-				<td bgcolor="#00FF00">${p.length}</td>
-			</g:if>
-			<g:else>
-			    <td bgcolor="#FF0000">${p.name}</td>
-			    <td bgcolor="#FF0000">${p.belongs}</td>
-				<td bgcolor="#FF0000">${p.length}</td>
-			</g:else>
+  	<div class="col-sm-12" align="center"><h1>Final Report</h1></div>
+    <br>
+  	<div class="col-sm-12">
+    	<div class="col-sm-1"></div>
+    	<div class="col-sm-10">
+    		<h3>Large Class</h3>
+    		<div class="col-sm-12" align="center">
+      		<table>
+      		  <tr>
+      		    <th>Name</th>
+      		    <th>length</th>
+      		  </tr>
+        		 <g:each in="${largeClass}" var="p">
+      			<tr>
+        			<g:if test="${p.length < 100}">
+        			  <td bgcolor="#00FF00">${p.name}</td>
+        				<td bgcolor="#00FF00">${p.length}</td>
+        			</g:if>
+        			<g:else>
+        			    <td bgcolor="#FF0000">${p.name}</td>
+        				<td bgcolor="#FF0000">${p.length}</td>
+        			</g:else>
+      			</tr>
+      		  </g:each>
+      		</table>
+    	  </div>
+    	</div>
+  	 <div class="col-sm-1"></div>
+  	</div>
 
-			</tr>
-		  </g:each>
-		
-		</table>
-		
-	  </div>
-		  
-		
-		
-		
-	</div>
-	<div class="col-sm-1"></div>
-	</div>
-	
-	
-	<br>
-	<div class="col-sm-12">
-	<div class="col-sm-1"></div>
-	<div class="col-sm-10">
-		<h3>Large Class</h3>
-		<div class="col-sm-12" align="center">	
-		<table>
-		  <tr>
-		    <th>Name</th>
-		    <th>length</th>
-		  </tr>
-  		  
-  		  <g:each in="${largeClass}" var="p">
-			<tr>
-			<g:if test="${p.length < 100}">
-			    <td bgcolor="#00FF00">${p.name}</td>
-				<td bgcolor="#00FF00">${p.length}</td>
-			</g:if>
-			<g:else>
-			    <td bgcolor="#FF0000">${p.name}</td>
-				<td bgcolor="#FF0000">${p.length}</td>
-			</g:else>
+    <br>
+    <div class="col-sm-12">
+    	<div class="col-sm-1"></div>
+    	<div class="col-sm-10">
+    		<h3>Data Class</h3>
+    		<div class="col-sm-12" align="center">
+    		<table>
+    		  <tr>
+    		    <th>Class</th>
+    		    <th>Number of methods </th>
+    		    <th>Number of setters and getters</th>
+    		  </tr>
+      		 <g:each in="${largeClass}" var="p">
+    			<tr>
+      			<g:if test="${p.isDataClass == false }">
+      			    <td bgcolor="#00FF00">${p.name}</td>
+      			    <td bgcolor="#00FF00">${p.totalMethods}</td>
+      				<td bgcolor="#00FF00">${p.setGetter}</td>
+      			</g:if>
+      			<g:else>
+      			    <td bgcolor="#FF0000">${p.name}</td>
+      			    <td bgcolor="#FF0000">${p.totalMethods}</td>
+      				<td bgcolor="#FF0000">${p.setGetter}</td>
+      			</g:else>
+    			</tr>
+    		  </g:each>
+    		</table>
+    	  </div>
+    	</div>
+    	<div class="col-sm-1"></div>
+  	</div>
 
-			</tr>
-		  </g:each>
-		
-		</table>
-		
-	  </div>
-		  
-		
-		
-		
-	</div>
-	<div class="col-sm-1"></div>
-	</div>
-	
-	<br>
-	<div class="col-sm-12">
-	<div class="col-sm-1"></div>
-	<div class="col-sm-8">
-		<h3>Lazy class</h3>
-	</div>
-	</div>
-	
-	<br>
-	<div class="col-sm-12">
-	<div class="col-sm-1"></div>
-	<div class="col-sm-8">
-		<h3>Data class</h3>
-	</div>
-	</div>
-	
-	
+    <br>
+  	<div class="col-sm-12">
+  	<div class="col-sm-1"></div>
+  	<div class="col-sm-8">
+  		<h3>Lazy class</h3>
+  	</div>
+  	</div>
 
-	<br>
-	<div class="col-sm-12">
-	<div class="col-sm-1"></div>
-	<div class="col-sm-10">
-		<h3>Long Parameter List</h3>
-		<div class="col-sm-12" align="center">	
-		<table>
-		  <tr>
-		    <th>Name</th>
-		    <th>Belongs</th>
-		    <th>Number of parameters</th>
-		  </tr>
-  		  
-  		  <g:each in="${methodlength}" var="p">
-			<tr>
-			<g:if test="${p.paramNum < 5}">
-			    <td bgcolor="#00FF00">${p.name}</td>
-			    <td bgcolor="#00FF00">${p.belongs}</td>
-				<td bgcolor="#00FF00">${p.paramNum}</td>
-			</g:if>
-			<g:else>
-			    <td bgcolor="#FF0000">${p.name}</td>
-			    <td bgcolor="#FF0000">${p.belongs}</td>
-				<td bgcolor="#FF0000">${p.paramNum}</td>
-			</g:else>
+    <br>
+    <div class="col-sm-12">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <h3>Message chains</h3>
+        <div class="col-sm-12" align="center">
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Number of message chains </th>
+            </tr>
+             <g:each in="${largeClass}" var="p">
+            <tr>
+              <g:if test="${p.messageChains == 0}">
+                <td bgcolor="#00FF00">${p.name}</td>
+                <td bgcolor="#00FF00">${p.messageChains}</td>
+              </g:if>
+              <g:else>
+                  <td bgcolor="#FF0000">${p.name}</td>
+                <td bgcolor="#FF0000">${p.messageChains}</td>
+              </g:else>
+            </tr>
+            </g:each>
+          </table>
+        </div>
+      </div>
+     <div class="col-sm-1"></div>
+    </div>
 
-			</tr>
-		  </g:each>
-		
-		</table>
-		
-	  </div>
-		  
-		
-		
-		
+  	<br>
+  	<div class="col-sm-12">
+    	<div class="col-sm-1"></div>
+    	<div class="col-sm-10">
+    		<h3>Long Method</h3>
+    		<div class="col-sm-12" align="center">
+      		<table>
+      		  <tr>
+      		    <th>Name</th>
+      		    <th>Belongs</th>
+      		    <th>Length</th>
+      		  </tr>
+        		<g:each in="${methodlength}" var="p">
+        			<tr>
+          			<g:if test="${p.length < 40}">
+          			    <td bgcolor="#00FF00">${p.name}</td>
+          			    <td bgcolor="#00FF00">${p.belongs}</td>
+          				<td bgcolor="#00FF00">${p.length}</td>
+          			</g:if>
+          			<g:else>
+          			    <td bgcolor="#FF0000">${p.name}</td>
+          			    <td bgcolor="#FF0000">${p.belongs}</td>
+          				<td bgcolor="#FF0000">${p.length}</td>
+          			</g:else>
+        			</tr>
+      		  </g:each>
+      		</table>
+    	  </div>
+    	</div>
+    	<div class="col-sm-1"></div>
+  	</div>
+
+  	<br>
+  	<div class="col-sm-12">
+    	<div class="col-sm-1"></div>
+    	<div class="col-sm-10">
+    		<h3>Long Parameter List</h3>
+    		<div class="col-sm-12" align="center">
+    		<table>
+    		  <tr>
+    		    <th>Name</th>
+    		    <th>Belongs</th>
+    		    <th>Number of parameters</th>
+    		  </tr>
+      		 <g:each in="${methodlength}" var="p">
+    			<tr>
+      			<g:if test="${p.paramNum < 5}">
+      			    <td bgcolor="#00FF00">${p.name}</td>
+      			    <td bgcolor="#00FF00">${p.belongs}</td>
+      				<td bgcolor="#00FF00">${p.paramNum}</td>
+      			</g:if>
+      			<g:else>
+      			    <td bgcolor="#FF0000">${p.name}</td>
+      			    <td bgcolor="#FF0000">${p.belongs}</td>
+      				<td bgcolor="#FF0000">${p.paramNum}</td>
+      			</g:else>
+    			</tr>
+    		  </g:each>
+    		</table>
+    	  </div>
+    	</div>
+    	<div class="col-sm-1"></div>
+  	</div>
+
+    <br>
+  	<div class="col-sm-12">
+  	<div class="col-sm-1"></div>
+  	<div class="col-sm-8">
+  		<h3>Incorrect name variables</h3>
+  	</div>
+  	</div>
+
+
+
 	</div>
-	<div class="col-sm-1"></div>
-	</div>
-		
-	
-	
-	</div>
-	
+
 	<div class="col-sm-12" align="center">
 		<div class="col-sm-1"></div>
 		<div class="col-sm-10">
@@ -422,7 +447,7 @@
 	    	<g:layoutBody/>
 		</div>
 		</div>
-	
+
 	</div>
 	<script src="${assetPath(src: 'vivagraph.js')}"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -88,10 +88,14 @@ class WebreportController {
 				
 				//Comienzan a renderizar los conteos
 				
-				//Clase muy larga
+				// Informacion de la clase 
 				LengthClass lctemp = new LengthClass();
 				lctemp.name = pair.getKey();
 				lctemp.length = value.length;
+				lctemp.messageChains = value.messageChain;
+				lctemp.totalMethods = value.methods.size();
+				lctemp.setGetter = value.setGetter;
+				lctemp.isDataClass = value.isDataClass;
 				lc.add(lctemp);
 				
 				

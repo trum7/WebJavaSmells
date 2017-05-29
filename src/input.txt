@@ -22,6 +22,9 @@ public class Hello extends Saludo  {
  public void metodoInterfazHello(){};
   }
 
+public class Sola{
+
+}
 public interface Bye {
 
 }
