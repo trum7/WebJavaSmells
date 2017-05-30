@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <title>JavaSmells</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-  
+
+
     <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon1.ico')}" type="image/x-icon">
     <!-- Bootstrap -->
     <link href="${assetPath(src: 'bootstrap.css')}" rel="stylesheet">
     <link href="${assetPath(src: 'full.css')}" rel="stylesheet">
+    <!-- <link href="${assetPath(src: 'fonts.css')}" rel="stylesheet"> -->
     <link href="${assetPath(src: 'main1.css')}" rel="stylesheet">
     <link href="${assetPath(src: 'vendor.css')}" rel="stylesheet">
     <link href="${assetPath(src: 'base.css')}" rel="stylesheet">
@@ -37,8 +38,9 @@
 	   	<nav id="main-nav-wrap">
 				<ul class="main-navigation">
 					<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
-					<li><a class="smoothscroll"  href="#process" title="">Test</a></li>
-					<li><a class="smoothscroll"  href="#features" title="">Team</a></li>
+					<li><a class="smoothscroll"  href="#process" title="">How to</a></li>
+					<li><a class="smoothscroll"  href="#features" title="">Test</a></li>
+          	<li><a class="smoothscroll"  href="#pricing" title="">Team</a></li>
 				</ul>
 			</nav>
 
@@ -66,46 +68,89 @@
 	   			</div>-->
 
 	   			<h1>Java Code Smell Detection Tool</h1>
-                <h5 style="color: white">Are you a good programmer?</h5>
-
-
-
+                <h5 style="color:white">Are you a good programmer?</h5>
    		</div>
    	</div>
-
-   	<!-- Modal Popup
-	   ========================================================= -->
-
-      <!--<div id="video-popup" class="popup-modal mfp-hide">
-
-		   <div class="fluid-video-wrapper">
-            <iframe src="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=faec09" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-         </div>
-
-         <a class="close-popup">Close</a>
-
-	   </div> <!-- /video-popup -->-->
-
    </section> <!-- /intro -->
 
+   <section id="process">
+
+     <div class="row section-intro">
+    		<div class="col-twelve with-bottom-line">
+
+    			<h5>How to ... </h5>
+    			<h1>How does it work?</h1>
+
+    			<p class="lead">In a few simple steps you can find out how great of a programmer you are.</p>
+
+    		</div>
+    	</div>
+
+    	<div class="row features-content">
+
+    		<div class="features-list block-1-3 block-s-1-2 block-tab-full group">
+
+ 	      	<div class="bgrid feature">
+
+ 	      		<span class="icon"><i class="icon-window"></i></span>
+
+ 	            <div class="service-content">
+
+ 	            	 <h3 class="h05">Choose</h3>
+
+ 		            <p>Select the code you want to test and then put all your program classes in a single file.</p>
+
+ 	         	</div>
+
+ 				</div> <!-- /bgrid -->
+
+ 				<div class="bgrid feature">
+
+ 					<span class="icon"><i class="icon-file"></i></span>
+
+ 	            <div class="service-content">
+ 	            	<h3 class="h05">Copy</h3>
+ 		            <p>Copy you entire file in the white square you are going to find below and click the <i>Summit</i> button.</p>
+ 	            </div>
+
+ 			   </div> <!-- /bgrid -->
+
+ 			   <div class="bgrid feature">
+
+ 			   	<span class="icon"><i class="icon-gift"></i></span>
+
+ 	            <div class="service-content">
+ 	            	<h3 class="h05">Enjoy!</h3>
+
+ 		            <p>Wait a few seconds and then find all the details about your code's posible bad smells.
+ 	        			</p>
+
+
+ 	            </div>
+
+ 			   </div> <!-- /bgrid -->
+ 	      </div> <!-- features-list -->
+
+    	</div> <!-- features-content -->
+   </section> <!-- /process-->
 
    <!-- Process Section
    ================================================== -->
-   <section id="process">
+   <section id="features">
 
    	<div class="row section-intro">
    		<div class="col-twelve with-bottom-line">
 
    			<h5>Tester</h5>
-   			<h1>¿Are you a good programmer?</h1>
+   			<h1>Are you a good programmer?</h1>
    		</div>
    	</div>
 
    	<div>
-   	
+
    	<div class="row" align="center">
    	<div class="col-sm-2"></div>
-   	
+
    	<div class="col-sm-8">
                   <g:form controller="antlr" action="index">
                   <div class="form-group">
@@ -119,19 +164,19 @@
                       </div>
                   </div>
               </g:form>
-      </div>     
+      </div>
      <div class="col-sm-2"></div>
    	</div>
-   	
-   	
+
+
    	</div>
 
-   </section> <!-- /process-->
+  </section> <!-- /features-->
 
 
    <!-- features Section
    ================================================== -->
-	<section id="features">
+	<section id="pricing">
 
 		<div class="row section-intro">
    		<div class="col-twelve with-bottom-line">
@@ -188,6 +233,3 @@
     <script src="${assetPath(src: 'main.js')}"></script>
   </body>
 </html>
-
-
-

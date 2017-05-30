@@ -3,18 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Web Report</title>
+	   <title>Web Report</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon1.ico')}" type="image/x-icon">
-	<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
-	<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
+	  <link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
+	  <link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
 
 	<!-- Bootstrap theme -->
-    <link href="${assetPath(src: 'bootstrap-theme.min.css')}" rel="stylesheet">
-	<!-- Custom theme styles -->
-    <link href="${assetPath(src: 'theme.css')}" rel="stylesheet">
+    <!-- <link href="${assetPath(src: 'bootstrap-theme.min.css')}" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap4.min.css"> -->
+
     <link href="${assetPath(src: 'bootstrap.css')}" rel="stylesheet">
     <link href="${assetPath(src: 'full.css')}" rel="stylesheet">
+    <link href="${assetPath(src: 'main1.css')}" rel="stylesheet">
+    <link href="${assetPath(src: 'vendor.css')}" rel="stylesheet">
+    <link href="${assetPath(src: 'base.css')}" rel="stylesheet">
+    <link href="${assetPath(src: 'dataTables.bootstrap.min.css')}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,13 +34,13 @@
             // compose group of elements to represent a node.
             var graph = Viva.Graph.graph();
             var graphics = Viva.Graph.View.svgGraphics(),
-                nodeSize = 24;
+                nodeSize = 30;
             //Definicion nodos
             var i = 0;
 			//alert(name);
-			alert(a);
-			alert(b);
-			alert(d);
+			// alert(a);
+			// alert(b);
+			// alert(d);
             while(i<b.length){
 
             	graph.addNode(b[i]);
@@ -67,12 +72,12 @@
 			var createMarker = function(id) {
 			        return Viva.Graph.svg('marker')
 			                .attr('id', id)
-			                .attr('viewBox', "0 0 10 10")
-			                .attr('refX', "10")
-			                .attr('refY', "5")
+			                .attr('viewBox', "0 0 0 0")
+			                .attr('refX', "0")
+			                .attr('refY', "0")
 			                .attr('markerUnits', "strokeWidth")
 			                .attr('markerWidth', "10")
-			                .attr('markerHeight', "5")
+			                .attr('markerHeight', "10")
 			                .attr('orient', "auto");
 			},
 
@@ -89,7 +94,7 @@
 			            	        graphics.getSvgRoot().childNodes[0].append(label);
 
 			    return Viva.Graph.svg('path')
-			        .attr('stroke', 'gray')
+			        .attr('stroke', '#05bca9')
 			        .attr('marker-end', 'url(#Triangle)')
 			        .attr('id', link.data.id);
 			    }).placeLink(function(linkUI, fromPos, toPos) {
@@ -215,283 +220,433 @@
         html, body, svg { width: 100%; height: 100%;}
     </style>
 
-    <style>
-		table {
-		    font-family: arial, sans-serif;
-		    border-collapse: collapse;
-		    width: 100%;
-		    border: 1px solid black;
-		}
-
-		th{
-			border: 1px solid black;
-			background-color: white;
-		    text-align: center;
-		    padding: 8px;
-		}
-		td{
-		    border: 1px solid black;
-		    text-align: center;
-		    padding: 8px;
-		}
-
-		tr:nth-child(even) {
-		    background-color: #dddddd;
-		}
-		</style>
   </head>
-  <body style="background-image: url('../assets/result.png');background-repeat: repeat;" onload="main(${a},${b},${c},${d},${e})">
+  <body onload="main(${a},${b},${c},${d},${e})">
     <!-- Fixed navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="../">JavaCodeSmells</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="../">Home</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+    <!-- header
+     ================================================== -->
+     <header>
 
-	<div class="row">
+     	<div class="row">
+  	   	<nav id="main-nav-wrap">
+  				<ul class="main-navigation">
+  					<li class="current"><a href="/Proyecto1" title="">Home</a></li>
+  					<li><a class="smoothscroll"  href="#features" title="">Code Smells</a></li>
+            <li><a class="smoothscroll"  href="#process" title="">Report</a></li>
+  					<li><a class="smoothscroll"  href="#pricing" title="">Graph</a></li>
+  				</ul>
+  			</nav>
 
-  	<div class="col-sm-12" align="center"><h1>Final Report</h1></div>
-    <br>
-  	<div class="col-sm-12">
-    	<div class="col-sm-1"></div>
-    	<div class="col-sm-10">
-    		<h3>Large Class</h3>
-    		<div class="col-sm-12" align="center">
-      		<table>
-      		  <tr>
-      		    <th>Name</th>
-      		    <th>length</th>
-      		  </tr>
-        		 <g:each in="${largeClass}" var="p">
-      			<tr>
-        			<g:if test="${p.length < 100}">
-        			  <td bgcolor="#00FF00">${p.name}</td>
-        				<td bgcolor="#00FF00">${p.length}</td>
-        			</g:if>
-        			<g:else>
-        			    <td bgcolor="#FF0000">${p.name}</td>
-        				<td bgcolor="#FF0000">${p.length}</td>
-        			</g:else>
-      			</tr>
-      		  </g:each>
-      		</table>
-    	  </div>
-    	</div>
-  	 <div class="col-sm-1"></div>
-  	</div>
+  			<a class="menu-toggle" href="/Proyecto1"><span>Menu</span></a>
 
-    <br>
-    <div class="col-sm-12">
-    	<div class="col-sm-1"></div>
-    	<div class="col-sm-10">
-    		<h3>Data Class</h3>
-    		<div class="col-sm-12" align="center">
-    		<table>
-    		  <tr>
-    		    <th>Class</th>
-    		    <th>Number of methods </th>
-    		    <th>Number of setters and getters</th>
-    		  </tr>
-      		 <g:each in="${largeClass}" var="p">
-    			<tr>
-      			<g:if test="${p.isDataClass == false }">
-      			    <td bgcolor="#00FF00">${p.name}</td>
-      			    <td bgcolor="#00FF00">${p.totalMethods}</td>
-      				<td bgcolor="#00FF00">${p.setGetter}</td>
-      			</g:if>
-      			<g:else>
-      			    <td bgcolor="#FF0000">${p.name}</td>
-      			    <td bgcolor="#FF0000">${p.totalMethods}</td>
-      				<td bgcolor="#FF0000">${p.setGetter}</td>
-      			</g:else>
-    			</tr>
-    		  </g:each>
-    		</table>
-    	  </div>
-    	</div>
-    	<div class="col-sm-1"></div>
-  	</div>
+     	</div>
 
-    <br>
-    <div class="col-sm-12">
-      <div class="col-sm-1"></div>
+     </header> <!-- /header -->
+     <!-- Info bad Smells
+      ===========================================-->
+      <section id="features">
+
+    		<div class="row section-intro">
+       		<div class="col-twelve with-bottom-line">
+
+
+       			<h1>Code Smells </h1>
+
+       			<h5 class="lead"><em>"A code smell is a surface indication that usually corresponds to a deeper problem in the system"</em></h5>
+            <h5 class="h06">Martin Fowler</h5>
+       		</div>
+       	</div>
+
+       	<div class="row features-content">
+
+       		<div class="features-list block-1-3 block-s-1-2 block-tab-full group">
+
+    	      	<div class="bgrid feature">
+
+    	      		<span class="icon"><i class="icon-window"></i></span>
+
+    	            <div class="service-content">
+
+    	            	 <h3 class="h05">Long Class</h3>
+    		            <p>Usually are classes with more than one hundred (100) lines of code.</p>
+
+    	         	</div>
+
+    				</div> <!-- /bgrid -->
+
+    				<div class="bgrid feature">
+
+    					<span class="icon"><i class="icon-eye"></i></span>
+
+    	            <div class="service-content">
+    	            	<h3 class="h05">Data Class</h3>
+    		            <p>Class which only contains <i>accessor</i> and <i>mutator</i> methods.
+    	         		</p>
+    	            </div>
+
+    			   </div> <!-- /bgrid -->
+
+    			   <div class="bgrid feature">
+
+    			   	<span class="icon"><i class="icon-new-file"></i></span>
+
+    	            <div class="service-content">
+    	            	<h3 class="h05">Lazy Class</h3>
+
+    		            <p>Class that has not enough functionality, usually is a class that is never instantiated
+    	        			</p>
+    	            </div>
+
+    			   </div> <!-- /bgrid -->
+
+    				<div class="bgrid feature">
+
+    					<span class="icon"><i class="icon-group"></i></span>
+
+    	            <div class="service-content">
+    	            	<h3 class="h05">Message Chains</h3>
+    		            <p>Are excessively long methods calls.</p>
+    	            </div>
+
+    				</div> <!-- /bgrid -->
+
+    			   <div class="bgrid feature">
+
+    			   	<span class="icon"><i class="icon-layers"></i></span>
+
+    	            <div class="service-content">
+    	            	<h3 class="h05">Long Method</h3>
+
+    		            <p>Methods with more than fifteen (15) lines of code.
+    	        			</p>
+
+
+    	            </div>
+
+    			   </div> <!-- /bgrid -->
+
+    			   <div class="bgrid feature">
+
+    			   	<span class="icon"><i class="icon-files"></i></span>
+
+    	            <div class="service-content">
+    	            	 <h3 class="h05">Long Parameter list </h3>
+
+    		            <p>Method that requires more than five parameters</p>
+
+    	            </div>
+
+    			   </div> <!-- /bgrid -->
+             <div class="bgrid feature">
+
+    			   	<span class="icon"><i class="icon-question"></i></span>
+
+    	            <div class="service-content">
+    	            	 <h3 class="h05">Uncommunicative variable names </h3>
+
+    		            <p>Variables with meaningless names. Generally are variables which names are one or two letters long or variable names ending with a number.
+    	        			</p>
+
+    	            </div>
+
+    			   </div> <!-- /bgrid -->
+             <div class="bgrid feature">
+
+    			   	<span class="icon"><i class="icon-network"></i></span>
+
+    	            <div class="service-content">
+    	            	 <h3 class="h05">Shotgun Surgery </h3>
+
+    		            <p>Highly coupled classes.When a change is made it must also be made in other classes.</p>
+
+    	            </div>
+
+    			   </div> <!-- /bgrid -->
+
+    	      </div> <!-- features-list -->
+
+       	</div> <!-- features-content -->
+
+    	</section> <!-- /features -->
+
+
+
+     <!--  Tables report
+      ===========================================-->
+     <section id="process">
+
+     	<div class="row section-intro">
+     		<div class="col-twelve with-bottom-line">
+
+     			<h1>Bad smells report</h1>
+
+     			<p class="lead">Find all the details of your code</p>
+
+     		</div>
+     	</div>
+
+     	<div class="row process-content">
+        <div class="col-sm-10">
+      		<h3 class="h01">Long Class</h3>
+          <div class="col-sm-12" align="center">
+            <table class="table table-hover table-bordered" id="table1">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Length</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <g:each in="${largeClass}" var="p">
+                  <tr>
+                    <g:if test="${p.length < 100 }">
+                      <td bgcolor="#70F98F">${p.name}</td>
+                      <td bgcolor="#70F98F">${p.length}</td>
+                    </g:if>
+                    <g:else>
+                      <td bgcolor="#F47171">${p.name}</td>
+                      <td bgcolor="#F47171">${p.length}</td>
+                    </g:else>
+                  </tr>
+                  </g:each>
+              </tbody>
+            </table>
+          </div>
+      	</div>
+     </div> <!-- /process-content -->
+     <br>
+     <div class="row process-content">
       <div class="col-sm-10">
-        <h3>Lazy Class</h3>
+        <h3 class="h01">Data Class</h3>
         <div class="col-sm-12" align="center">
-          <table>
-            <tr>
-              <th>Name</th>
-              <th>Number of instances </th>
-            </tr>
-             <g:each in="${largeClass}" var="p">
-            <tr>
-              <g:if test="${p.countAp > 0}">
-              <script type="text/javascript">
-                alert("FUNCIONA")
-              </script>
-                <td bgcolor="#00FF00">${p.name}</td>
-                <td bgcolor="#00FF00">${p.countAp}</td>
-              </g:if>
-              <g:else>
-                  <td bgcolor="#FF0000">${p.name}</td>
-                <td bgcolor="#FF0000">${p.countAp}</td>
-              </g:else>
-            </tr>
-            </g:each>
+          <table class="table table-hover table-bordered" id="table2">
+            <thead>
+              <tr>
+                <th>Class</th>
+        		    <th>Number of methods </th>
+        		    <th>Number of setters and getters</th>
+              </tr>
+            </thead>
+            <tbody>
+                <g:each in="${largeClass}" var="p">
+                <tr>
+                  <g:if test="${p.isDataClass == false }">
+            			    <td bgcolor="#70F98F">${p.name}</td>
+            			    <td bgcolor="#70F98F">${p.totalMethods}</td>
+            				<td bgcolor="#70F98F">${p.setGetter}</td>
+            			</g:if>
+            			<g:else>
+            			    <td bgcolor="#F47171">${p.name}</td>
+            			    <td bgcolor="#F47171">${p.totalMethods}</td>
+            				  <td bgcolor="#F47171">${p.setGetter}</td>
+            			</g:else>
+                </tr>
+                </g:each>
+            </tbody>
           </table>
         </div>
       </div>
-     <div class="col-sm-1"></div>
-    </div>
-
-    <br>
-    <div class="col-sm-12">
-      <div class="col-sm-1"></div>
+     </div> <!-- /process-content -->
+     <br>
+     <div class="row process-content">
       <div class="col-sm-10">
-        <h3>Message chains</h3>
+        <h3 class="h01">Lazy Class</h3>
         <div class="col-sm-12" align="center">
-          <table>
-            <tr>
-              <th>Name</th>
-              <th>Number of message chains </th>
-            </tr>
-             <g:each in="${largeClass}" var="p">
-            <tr>
-              <g:if test="${p.messageChains == 0}">
-                <td bgcolor="#00FF00">${p.name}</td>
-                <td bgcolor="#00FF00">${p.messageChains}</td>
-              </g:if>
-              <g:else>
-                  <td bgcolor="#FF0000">${p.name}</td>
-                <td bgcolor="#FF0000">${p.messageChains}</td>
-              </g:else>
-            </tr>
-            </g:each>
+          <table class="table table-hover table-bordered" id="table3">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Number of instances </th>
+              </tr>
+            </thead>
+            <tbody>
+                <g:each in="${largeClass}" var="p">
+                <tr>
+                  <g:if test="${p.countAp > 0}">
+                    <td bgcolor="#70F98F">${p.name}</td>
+                    <td bgcolor="#70F98F">${p.countAp}</td>
+                  </g:if>
+                  <g:else>
+                    <td bgcolor="#F47171">${p.name}</td>
+                    <td bgcolor="#F47171">${p.countAp}</td>
+                  </g:else>
+                </tr>
+                </g:each>
+            </tbody>
           </table>
         </div>
       </div>
-     <div class="col-sm-1"></div>
-    </div>
-
-  	<br>
-  	<div class="col-sm-12">
-    	<div class="col-sm-1"></div>
-    	<div class="col-sm-10">
-    		<h3>Long Method</h3>
-    		<div class="col-sm-12" align="center">
-      		<table>
-      		  <tr>
-      		    <th>Name</th>
-      		    <th>Belongs</th>
-      		    <th>Length</th>
-      		  </tr>
-        		<g:each in="${methodlength}" var="p">
-        			<tr>
-          			<g:if test="${p.length < 40}">
-          			    <td bgcolor="#00FF00">${p.name}</td>
-          			    <td bgcolor="#00FF00">${p.belongs}</td>
-          				<td bgcolor="#00FF00">${p.length}</td>
-          			</g:if>
-          			<g:else>
-          			    <td bgcolor="#FF0000">${p.name}</td>
-          			    <td bgcolor="#FF0000">${p.belongs}</td>
-          				<td bgcolor="#FF0000">${p.length}</td>
-          			</g:else>
-        			</tr>
-      		  </g:each>
-      		</table>
-    	  </div>
-    	</div>
-    	<div class="col-sm-1"></div>
-  	</div>
-
-  	<br>
-  	<div class="col-sm-12">
-    	<div class="col-sm-1"></div>
-    	<div class="col-sm-10">
-    		<h3>Long Parameter List</h3>
-    		<div class="col-sm-12" align="center">
-    		<table>
-    		  <tr>
-    		    <th>Name</th>
-    		    <th>Belongs</th>
-    		    <th>Number of parameters</th>
-    		  </tr>
-      		 <g:each in="${methodlength}" var="p">
-    			<tr>
-      			<g:if test="${p.paramNum < 5}">
-      			    <td bgcolor="#00FF00">${p.name}</td>
-      			    <td bgcolor="#00FF00">${p.belongs}</td>
-      				<td bgcolor="#00FF00">${p.paramNum}</td>
-      			</g:if>
-      			<g:else>
-      			    <td bgcolor="#FF0000">${p.name}</td>
-      			    <td bgcolor="#FF0000">${p.belongs}</td>
-      				<td bgcolor="#FF0000">${p.paramNum}</td>
-      			</g:else>
-    			</tr>
-    		  </g:each>
-    		</table>
-    	  </div>
-    	</div>
-    	<div class="col-sm-1"></div>
-  	</div>
-
-    <br>
-    <div class="col-sm-12">
-      <div class="col-sm-1"></div>
+     </div> <!-- /process-content -->
+     <br>
+     <div class="row process-content">
       <div class="col-sm-10">
-        <h3>Incorrect variable names</h3>
+        <h3 class="h01">Message chains</h3>
         <div class="col-sm-12" align="center">
-          <table>
-            <tr>
-              <th>Name</th>
-              <th>Number of appearances </th>
-            </tr>
-             <g:each in="${varNames}" var="p">
-            <tr>
-              <td bgcolor=#ffc61a>${p.name}</td>
-              <td bgcolor="#ffc61a">${p.count}</td>
-            </tr>
-            </g:each>
+          <table class="table table-hover table-bordered" id="table4">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Number of message chains </th>
+              </tr>
+            </thead>
+            <tbody>
+                <g:each in="${largeClass}" var="p">
+                <tr>
+                  <g:if test="${p.messageChains == 0}">
+                    <td bgcolor="#70F98F">${p.name}</td>
+                    <td bgcolor="#70F98F">${p.messageChains}</td>
+                  </g:if>
+                  <g:else>
+                    <td bgcolor="#F47171">${p.name}</td>
+                    <td bgcolor="#F47171">${p.messageChains}</td>
+                  </g:else>
+                </tr>
+                </g:each>
+            </tbody>
           </table>
         </div>
       </div>
-     <div class="col-sm-1"></div>
-    </div>
+     </div> <!-- /process-content -->
+     <br>
+     <div class="row process-content">
+      <div class="col-sm-10">
+        <h3 class="h01">Long Method</h3>
+        <div class="col-sm-12" align="center">
+          <table class="table table-hover table-bordered" id="table5">
+            <thead>
+              <tr>
+                <th>Name</th>
+        		    <th>Belongs</th>
+        		    <th>Length</th>
+              </tr>
+            </thead>
+            <tbody>
+                <g:each in="${methodlength}" var="p">
+                <tr>
+                  	<g:if test="${p.length < 40}">
+                    <td bgcolor="#70F98F">${p.name}</td>
+                    <td bgcolor="#70F98F">${p.belongs}</td>
+                    <td bgcolor="#70F98F">${p.length}</td>
+                  </g:if>
+                  <g:else>
+                    <td bgcolor="#F47171">${p.name}</td>
+                    <td bgcolor="#F47171">${p.belongs}</td>
+                    <td bgcolor="#F47171">${p.length}</td>
+                  </g:else>
+                </tr>
+                </g:each>
+            </tbody>
+          </table>
+        </div>
+      </div>
+     </div> <!-- /process-content -->
+     <br>
+     <div class="row process-content">
+      <div class="col-sm-10">
+        <h3 class="h01">Long Parameter List</h3>
+        <div class="col-sm-12" align="center">
+          <table class="table table-hover table-bordered" id="table6">
+            <thead>
+              <tr>
+                <th>Name</th>
+        		    <th>Belongs</th>
+        		    <th>Number of parameters</th>
+              </tr>
+            </thead>
+            <tbody>
+                <g:each in="${methodlength}" var="p">
+                <tr>
+                  	<g:if test="${p.paramNum < 5}">
+                    <td bgcolor="#70F98F">${p.name}</td>
+                    <td bgcolor="#70F98F">${p.belongs}</td>
+                    <td bgcolor="#70F98F">${p.paramNum}</td>
+                  </g:if>
+                  <g:else>
+                    <td bgcolor="#F47171">${p.name}</td>
+                    <td bgcolor="#F47171">${p.belongs}</td>
+                    <td bgcolor="#F47171">${p.paramNum}</td>
+                  </g:else>
+                </tr>
+                </g:each>
+            </tbody>
+          </table>
+        </div>
+      </div>
+     </div> <!-- /process-content -->
+     <br>
+     <div class="row process-content">
+      <div class="col-sm-10">
+        <h3 class="h01">Uncommunicative variable names</h3>
+        <div class="col-sm-12" align="center">
+          <table class="table table-hover table-bordered" id="table7">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Number of appearances </th>
+              </tr>
+            </thead>
+            <tbody>
+                <g:each in="${varNames}" var="p">
+                <tr>
+                  <td bgcolor="#70D4F9">${p.name}</td>
+                  <td bgcolor="#70D4F9">${p.count}</td>
+                </tr>
+                </g:each>
+            </tbody>
+          </table>
+        </div>
+      </div>
+     </div> <!-- /process-content -->
+     </section> <!-- /process-->
+     <section id="pricing">
+
+     	<div class="row section-intro">
+     		<div class="col-twelve with-bottom-line">
+     			<h1>Graph</h1>
+     			<p class="lead">In this graph is shown all the dependencies, implementations and extensions of a class.</p>
+     		</div>
+     	</div>
+      <div class="row pricing-content">
+          <g:layoutBody/>
+      </div>
 
 
 
-	</div>
 
+
+
+
+     </section> <!-- /pricing -->
+
+<!--
 	<div class="col-sm-12" align="center">
 		<div class="col-sm-1"></div>
 		<div class="col-sm-10">
 			<h1>Graph</h1>
 
-		<div class="container theme-showcase" role="main">
-	    	<g:layoutBody/>
-		</div>
+
 		</div>
 
-	</div>
+	</div> -->
 	<script src="${assetPath(src: 'vivagraph.js')}"></script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js"></script>
+  <script src="${assetPath(src: 'bootstrap.min.js')}"></script>
+  <script src="${assetPath(src: 'plugins.js')}"></script>
+  <script src="${assetPath(src: 'main.js')}"></script>
+  <script src="${assetPath(src: 'jquery-migrate-1.2.1.min.js')}"></script>
+  <script>
+      $('#table1').dataTable( );
+      $('#table2').dataTable( );
+      $('#table3').dataTable( );
+      $('#table4').dataTable( );
+      $('#table5').dataTable( );
+      $('#table6').dataTable( );
+      $('#table7').dataTable( );
+
+
+  </script>
+
   </body>
 </html>
