@@ -4,13 +4,13 @@
 
 public class Hello extends Saludo  {
 
-	String a;
+	String all1;
 	ArrayList hello;
-	Integer b;
-	char j;
+	Integer zzz;
+	//String jason;
 	public void go( int a ){
 		//ne = 1 ;
-		//b = new ArrayList();
+		b = new ArrayList();
 		for(Double g: u){
 		}
 		Double  y = 3;
@@ -22,6 +22,9 @@ public class Hello extends Saludo  {
  public void metodoInterfazHello(){};
   }
 
+public class Sola{
+
+}
 public interface Bye {
 
 }
@@ -35,7 +38,7 @@ public class Saludo{
 	public void metodosaludo(){};
 	public int metodo2saludo(int j) {};
 }
-public class Hallo extends Saludo implements Hello , Bye{
+public class Hallo extends Saludo implements Bye{
 	String z;
 	ArrayList shshs;
 	Integer tttttt;
@@ -51,9 +54,11 @@ public class Hello extends Saludo  {
 	ArrayList hello;
 	//Integer b;
 	char j;
+	
 	public void go( int a ){
 		//ne = 1 ;
 		//b = new ArrayList();
+		Hallo hel; 
 		for(Integer g: u){
 			while(true){
 				hello.this.g.h.add();
@@ -68,7 +73,7 @@ public class Hello extends Saludo  {
 	}
 
 	public void callGo( ){
-		go();
+		go(1);
 		metodosaludo();
 	}
 }*/

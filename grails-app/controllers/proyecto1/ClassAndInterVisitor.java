@@ -118,9 +118,13 @@ public class ClassAndInterVisitor <T> extends Java8BaseVisitor<T> {
 	
 	@Override
 	public T visitMethodDeclarator(MethodDeclaratorContext ctx) {
-		
+		ClassInfo classI = classes.get(currentName);
 		MethodInfo mi = new MethodInfo();
 		mi.name = ctx.Identifier().getText();
+		boolean cond = mi.name.toLowerCase().contains("get") || mi.name.toLowerCase().contains("set");
+		if (cond || mi.name.toLowerCase().equals("tostring")) {
+			classI.setGetter+=1;	
+		}
 		mi.belongs = this.currentName;
 		if(!methods.containsKey(mi.name)){
 			methods.put(mi.name, mi);

@@ -2,6 +2,7 @@ package proyecto1;
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
+import org.apache.poi.ss.formula.functions.T;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -35,8 +36,8 @@ public class Test {
 			ClassAndInterVisitor<Object> firstLoader = new ClassAndInterVisitor<Object>();
 			firstLoader.visit(tree);
 
-			//Visitor<Object> loader = new Visitor<Object>();
-			Visitor<Object> loader = new Visitor<Object>(firstLoader.classes, firstLoader.interfaces);
+			Visitor<Object> loader = new Visitor<Object>();
+//			Visitor<T> loader = new Visitor<T>(firstLoader.classes, firstLoader.interfaces);
 
 			loader.visit(tree);
 //			System.out.println(tree.toStringTree(parser)); // print LISP-style tree
@@ -79,9 +80,10 @@ public class Test {
 
     private void run() throws SQLException, ClassNotFoundException {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/words?user=root&password=root&zeroDateTimeBehavior=convertToNull");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/javacodesmells?user=root&password=root&zeroDateTimeBehavior=convertToNull");
         Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM words.word");
+        ResultSet resultSet = statement.executeQuery("SELECT word FROM javacodesmells.word where length(word) <= 2");
+        System.out.println(resultSet.getRow());
         //System.out.println("Printing schema for table: " + resultSet.getMetaData().getTableName(1));
         //int columnCount = resultSet.getMetaData().getColumnCount();
 
@@ -94,8 +96,9 @@ public class Test {
         ArrayList<String> words = new ArrayList<String>();
 
         while (resultSet.next()) {
-            words.add(resultSet.getString("lexeme"));
+            words.add(resultSet.getString("word"));
         }
+        System.out.println(words.size());
         ArrayList<String> notMatchAttributes = new ArrayList<String>();
 
 	    Iterator it = (Iterator) attributes.entrySet().iterator();
@@ -105,12 +108,17 @@ public class Test {
 	        Map.Entry pair = (Map.Entry)it.next();
 	        String search = pair.getKey().toString();
 	        System.out.println(pair.getKey() + " = " + pair.getValue());
-
+	        
 	        for(String word : words){
-
+	        	 
 	        	String s = "hello world i am from heaven";
-	        	if (search.indexOf(word) != -1) {
+//	        	System.out.println("Index of word"+ search.indexOf(word)); 
+	        	if (search.indexOf(word) != -1 ) {
 	        	  found = true;
+	        	  if (word != null){
+	        		  System.out.println("Hello I am in the db "+ word);
+	        	  }
+	        	  
 	        	  System.out.println("Encontro a: " + search + " Con la palabra: " + word);
 	        	  break;
 	        	}
@@ -123,6 +131,7 @@ public class Test {
 	        it.remove(); // avoids a ConcurrentModificationException
 	    }
         for(String a: notMatchAttributes){
+        	System.out.println("Not found ");
         	System.out.println(a);
         }
         System.out.println("Finalizo");

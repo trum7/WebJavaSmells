@@ -2,6 +2,7 @@ package proyecto1
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.ArrayList
 import java.util.HashMap;
 import java.util.Iterator
 import java.util.Map
@@ -13,19 +14,16 @@ import org.antlr.v4.runtime.tree.ParseTree;
 class AntlrController {
 
 	public static HashMap<String,Integer> lexemes;
+	public static HashMap<String,Integer> wrongName;
 	public static HashMap<String,Integer> attributes;
 	public static HashMap<String,Integer> classes;
-	
-    def index() {
-		
-		
+
+	def index() {
+
 		try{
-			
-			Test main = new Test();
-			
+
 			String input1 = params.code;
-			println input1;
-			
+//			println input1;
 //			System.setIn(new FileInputStream(new File("src/input.txt")));
 			ANTLRInputStream input = new ANTLRInputStream(input1);
 			Java8Lexer lexer= new Java8Lexer(input);
@@ -36,19 +34,22 @@ class AntlrController {
 			ParseTree tree = parser.compilationUnit(); // begin parsing at init rule
 			ClassAndInterVisitor<Object> firstLoader = new ClassAndInterVisitor<Object>();
 			firstLoader.visit(tree);
-			
+
 			//Visitor<Object> loader = new Visitor<Object>();
 			Visitor<Object> loader = new Visitor<Object>(firstLoader.classes, firstLoader.interfaces);
-			
+
 			loader.visit(tree);
 //			System.out.println(tree.toStringTree(parser)); // print LISP-style tree
-			
+
 			lexemes = loader.lexemes;
 			attributes = loader.attributes;
 			classes = firstLoader.classes;
+
+			wrongName = badName()
+			
 //			methods = loader.methods;
 //			System.out.println("Methods"+ methods.keySet());
-		    Iterator it = (Iterator) classes.entrySet().iterator();
+		    /*Iterator it = (Iterator) classes.entrySet().iterator();
 		    while (it.hasNext()) {
 		        Map.Entry pair = (Map.Entry)it.next();
 				ClassInfo value = (ClassInfo) pair.getValue();
@@ -58,7 +59,7 @@ class AntlrController {
 				System.out.println("References"+ " = " + value.referencesClasses.toString());
 		        System.out.println(pair.getKey() + " = " + pair.getValue().toString());
 		        it.remove(); // avoids a ConcurrentModificationException
-		    }
+		    }*/
 
 			/*try {
 				System.out.println("Si");
@@ -66,17 +67,67 @@ class AntlrController {
 			} catch (Exception e) {
 				System.err.println(e.getMessage());
 			}*/
-			
 
-			
-			
+			session.lexemes = loader.lexemes;
+			session.attributes = loader.attributes;
+			session.classes = firstLoader.classes;
+			session.interfaces = loader.interfaces;
+			session.methods = loader.methods;
+			session.wrongName = wrongName;
+
+
 		} catch (Exception e){
 			System.err.println("Error (Test): " + e);
 		}
-		
-		redirect(url: "/")
-		
-		
+
+		redirect (controller: "webreport", action: 'index')
+
 	}
+
+	def private HashMap badName(){
+		def words =  Word.executeQuery("Select word from Word where length(word) > 2 ")
+		HashMap<String,Integer> notMatchAttributes = new HashMap<String,Integer>();
+		ArrayList<String> dbWords = new ArrayList<String>();
+		for (w in words) {
+//			println w.word
+			dbWords.add(w)
+		}
+		println dbWords.size()
+		Iterator it = (Iterator) attributes.entrySet().iterator();
+		boolean found = false;
+		while ( it.hasNext() ) {
+			found = false;
+			Map.Entry pair = (Map.Entry)it.next();
+			String search = pair.getKey().toString();
+			int count = (int) pair.getValue();
+			char lastChar = search.charAt(search.size()-1)
+			boolean isNumeric = (search.charAt(search.size()-1).isDigit(lastChar))
+			println "Is numeric " + isNumeric 
+			System.out.println(pair.getKey() + " = " + pair.getValue());
+			if(search.size() > 2 && !isNumeric){
+				for(String word : dbWords){
+					//				String s = "hello world i am from heaven";
+					//	        	System.out.println("Index of word"+ search.indexOf(word));
+					if (search.indexOf(word) != -1 ) {
+					  found = true;
+					  System.out.println("Encontro a: " + search + " Con la palabra: " + word);
+					  break;
+					}
+				}
+			}
+			
+			if( !found ){
+				notMatchAttributes.put(search, count);
+			}
+			it.remove(); // avoids a ConcurrentModificationException
+		}
+		for(String a: notMatchAttributes){
+			System.out.println("Not found ");
+			System.out.println(a);
+		}
+		System.out.println("Finalizo");
+		return notMatchAttributes
+	}
+	
 
 }
