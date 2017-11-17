@@ -110,7 +110,7 @@ class AntlrController {
 					//	        	System.out.println("Index of word"+ search.indexOf(word));
 					if (search.indexOf(word) != -1 ) {
 					  found = true;
-					  System.out.println("Encontro a: " + search + " Con la palabra: " + word);
+//					  System.out.println("Encontro a: " + search + " Con la palabra: " + word);
 					  break;
 					}
 				}
