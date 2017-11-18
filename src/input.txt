@@ -2,7 +2,7 @@
 // implements
 // instancia
 
-public class Hello extends Saludo  {
+public static class Hello extends Saludo  {
 
 	String all1;
 	ArrayList hello;

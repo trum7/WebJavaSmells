@@ -7,6 +7,7 @@ import java.util.ArrayList
 import java.util.HashMap;
 import java.util.Iterator
 import java.util.Map
+import groovy.io.*
 
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -18,13 +19,13 @@ class AntlrController {
 	public static HashMap<String,Integer> wrongName;
 	public static HashMap<String,Integer> attributes;
 	public static HashMap<String,Integer> classes;
+	public static String className;
 
 	def index() {
 
 		try{
 
 			String input1 = params.code;
-			codeVisitor(input1);
 //			println input1;
 //			System.setIn(new FileInputStream(new File("src/input.txt")));
 			ANTLRInputStream input = new ANTLRInputStream(input1);
@@ -51,34 +52,15 @@ class AntlrController {
 			classes = firstLoader.classes;
 
 			wrongName = badName()
+			className = createMainClass(input1);
 			
-//			methods = loader.methods;
-//			System.out.println("Methods"+ methods.keySet());
-		    /*Iterator it = (Iterator) classes.entrySet().iterator();
-		    while (it.hasNext()) {
-		        Map.Entry pair = (Map.Entry)it.next();
-				ClassInfo value = (ClassInfo) pair.getValue();
-				System.out.println("Class" + pair.getKey() );
-				System.out.println("Parents"+ " = " + value.extendsClass.toString());
-				System.out.println("Implements"+ " = " + value.implementInterfaces.toString());
-				System.out.println("References"+ " = " + value.referencesClasses.toString());
-		        System.out.println(pair.getKey() + " = " + pair.getValue().toString());
-		        it.remove(); // avoids a ConcurrentModificationException
-		    }*/
-
-			/*try {
-				System.out.println("Si");
-				main.run();
-			} catch (Exception e) {
-				System.err.println(e.getMessage());
-			}*/
-
 			session.lexemes = loader.lexemes;
 			session.attributes = loader.attributes;
 			session.classes = firstLoader.classes;
 			session.interfaces = loader.interfaces;
 			session.methods = loader.methods;
 			session.wrongName = wrongName;
+			session.className = className;
 
 
 		} catch (Exception e){
@@ -90,39 +72,33 @@ class AntlrController {
 	}
 	
 	def private String createMainClass(String input1) {
-		def className = ""
+		
+		def divided = input1.split(System.getProperty("line.separator"));
+	
+		def className = extractName(divided)	
+		def filename = "./src/Codes/"+className
+		def file = new File(filename)
+		def w = file.newWriter()
+		w << input1
+		w.close()
 		return className
 	}
 	
-	def private String[] executeCodeAnalizer(String className) {
-		def sout = new StringBuilder(), serr = new StringBuilder()
-		def proc = "javac  ./src/Ejemplos/ExampleTest.java -d ./src/Classes".execute()
-		proc.consumeProcessOutput(sout, serr)
-		proc.waitForOrKill(2000)
-		println "out> $sout err> $serr"
-
-		def classes = []
-		def results = []
-		
-		def dir = new File("./src/Classes")
-		dir.eachFileRecurse (FileType.FILES) { file ->
-		  classes << file
-		}
-		
-		
-		classes.each {
-			def command = "java -jar ./lib/ckjm_ext.jar " + it.path.toString()
-			def proc1 = command.execute()
-			def sout1 = new StringBuilder(), serr1 = new StringBuilder()
-			proc1.consumeProcessOutput(sout1, serr1)
-			proc1.waitForOrKill(2000)
-			results << sout1
-			println "Ouput: $sout1, Errors: $serr1"
-			
-		  }
-		
-		return results
+	
+	
+	def private String extractName(String[] divided) {
+		def tempClass = ""
+		def className = ""
+		for (s in divided) {
+			if (s.contains('class')) {
+				tempClass = s.split('class')[1].trim().split(" ")
+				className = tempClass[0].replace("{","") +".java"
+				break
+			}
+		}	
+		return className
 	}
+	
 
 	def private HashMap badName(){
 		def words =  Word.executeQuery("Select word from Word where length(word) > 2 ")
