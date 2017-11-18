@@ -2,6 +2,7 @@ package proyecto1
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.InputStream
 import java.util.ArrayList
 import java.util.HashMap;
 import java.util.Iterator
@@ -92,7 +93,7 @@ class AntlrController {
 //			println w.word
 			dbWords.add(w)
 		}
-		println dbWords.size()
+//		println dbWords.size()
 		Iterator it = (Iterator) attributes.entrySet().iterator();
 		boolean found = false;
 		while ( it.hasNext() ) {
@@ -102,8 +103,8 @@ class AntlrController {
 			int count = (int) pair.getValue();
 			char lastChar = search.charAt(search.size()-1)
 			boolean isNumeric = (search.charAt(search.size()-1).isDigit(lastChar))
-			println "Is numeric " + isNumeric 
-			System.out.println(pair.getKey() + " = " + pair.getValue());
+//			println "Is numeric " + isNumeric 
+//			System.out.println(pair.getKey() + " = " + pair.getValue());
 			if(search.size() > 2 && !isNumeric){
 				for(String word : dbWords){
 					//				String s = "hello world i am from heaven";
@@ -122,8 +123,8 @@ class AntlrController {
 			it.remove(); // avoids a ConcurrentModificationException
 		}
 		for(String a: notMatchAttributes){
-			System.out.println("Not found ");
-			System.out.println(a);
+//			System.out.println("Not found ");
+//			System.out.println(a);
 		}
 		System.out.println("Finalizo");
 		return notMatchAttributes

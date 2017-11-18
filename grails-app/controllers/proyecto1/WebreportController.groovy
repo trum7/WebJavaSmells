@@ -1,8 +1,9 @@
 package proyecto1
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
+import java.io.*;
+import java.sql.*;
+import java.util.*;
+import groovy.io.*
 
 class WebreportController {
 
@@ -28,12 +29,12 @@ class WebreportController {
 				int a = i;
 		        Map.Entry pair = (Map.Entry)it.next();
 				ClassInfo value = (ClassInfo) pair.getValue();
-				System.out.println("Class" + pair.getKey() );
-				System.out.println("Parents"+ " = " + value.extendsClass.toString());
-				System.out.println("Implements"+ " = " + value.implementInterfaces.toString());
-				System.out.println("References"+ " = " + value.referencesClasses.toString());
-		        System.out.println(pair.getKey() + " = " + pair.getValue().toString());
-				
+//				System.out.println("Class" + pair.getKey() );
+//				System.out.println("Parents"+ " = " + value.extendsClass.toString());
+//				System.out.println("Implements"+ " = " + value.implementInterfaces.toString());
+//				System.out.println("References"+ " = " + value.referencesClasses.toString());
+//		        System.out.println(pair.getKey() + " = " + pair.getValue().toString());
+//				
 				name[y] = "\"" + pair.getKey() + "\"";
 				//System.out.println(name.toString());
 				if( value.extendsClass.size() > 0 ){
@@ -184,7 +185,31 @@ class WebreportController {
 				
 			}
 			
-			
+		
+//			def list = []
+//			
+//			def dir = new File("./src/Classes")
+//			dir.eachFileRecurse (FileType.FILES) { file ->
+//			  list << file
+//			}
+//			
+//			list.each {
+//				println it.path
+//			  }
+			  
+//			Sifunciona todo 
+			def sout = new StringBuilder(), serr = new StringBuilder()
+			def proc = "javac  ./src/Ejemplos/ExampleTest.java -d ./src/Classes".execute()
+			proc.consumeProcessOutput(sout, serr)
+			proc.waitForOrKill(2000)
+			println "out> $sout err> $serr"
+//			
+//			
+//			def proc1 = "java -jar ./lib/ckjm_ext.jar ./src/Ejemplos/ExampleTest.class ".execute()
+//			def sout1 = new StringBuilder(), serr1 = new StringBuilder()
+//			proc1.consumeProcessOutput(sout1, serr1)
+//			proc1.waitForOrKill(2000)
+//			println "Ouput: $sout1, Errors: $serr1"
 			
 			
 			[a:cla1,b:name,c:attr,d:inter,e:imple,largeClass:lc,methodlength:ml, varNames :vn]

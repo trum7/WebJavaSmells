@@ -5,21 +5,27 @@ package proyecto1;
 //import org.apache.poi.ss.formula.functions.T;
 
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Dictionary;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
-import java.util.Iterator;
 
 public class Test {
 	public static void main(String[] args) throws IOException, InterruptedException {
-		Process proc = Runtime.getRuntime().exec("java -jar ./lib/ckjm_ext.jar ./target/classes/proyecto1/ClassInfo.class");
+		Process proc1 =  Runtime.getRuntime().exec("javac  ./src/Ejemplos/ExampleTest.java -classpath  ./src/Ejemplos");
+		proc1.waitFor();
+		  InputStream in1 =  proc1.getInputStream();
+		  InputStream err1 = proc1.getErrorStream();
+
+		  byte b1[]=new byte[in1.available()];
+		  in1.read(b1,0,b1.length);
+		  System.out.println(new String(b1));
+
+		  byte c1[]=new byte[err1.available()];
+		  err1.read(c1,0,c1.length);
+		  System.out.println(new String(c1));
+		  
+		  Process proc = Runtime.getRuntime().exec("java -jar ./lib/ckjm_ext.jar ./src/Ejemplos/*.class ");
 		  proc.waitFor();
 		  // Then retreive the process output
 		  InputStream in =  proc.getInputStream();
