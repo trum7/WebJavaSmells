@@ -1,13 +1,16 @@
 package proyecto1
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
+import java.io.*;
+import java.sql.*;
+import java.util.*;
+import groovy.io.*
 
 class WebreportController {
 
 	def index(){
 		
+		def String className = session.className;
+		def String[] results; 
 		def String[] cla = new String[2*session.classes.size()];
 		def String[] attr = new String[1000];
 		def String[] name = new String[session.classes.size()];
@@ -28,12 +31,12 @@ class WebreportController {
 				int a = i;
 		        Map.Entry pair = (Map.Entry)it.next();
 				ClassInfo value = (ClassInfo) pair.getValue();
-				System.out.println("Class" + pair.getKey() );
-				System.out.println("Parents"+ " = " + value.extendsClass.toString());
-				System.out.println("Implements"+ " = " + value.implementInterfaces.toString());
-				System.out.println("References"+ " = " + value.referencesClasses.toString());
-		        System.out.println(pair.getKey() + " = " + pair.getValue().toString());
-				
+//				System.out.println("Class" + pair.getKey() );
+//				System.out.println("Parents"+ " = " + value.extendsClass.toString());
+//				System.out.println("Implements"+ " = " + value.implementInterfaces.toString());
+//				System.out.println("References"+ " = " + value.referencesClasses.toString());
+//		        System.out.println(pair.getKey() + " = " + pair.getValue().toString());
+//				
 				name[y] = "\"" + pair.getKey() + "\"";
 				//System.out.println(name.toString());
 				if( value.extendsClass.size() > 0 ){
@@ -134,7 +137,7 @@ class WebreportController {
 				int a = i;
 				Map.Entry pair = (Map.Entry)it1.next();
 				InterfaceInfo value = (InterfaceInfo) pair.getValue();
-				System.out.println(pair.getKey());
+//				System.out.println(pair.getKey());
 				inter[i] = "\"" + pair.getKey() + "\"";
 				i++;
 				
@@ -154,7 +157,7 @@ class WebreportController {
 				int a = i;
 				Map.Entry pair = (Map.Entry)it2.next();
 				MethodInfo value = (MethodInfo) pair.getValue();
-				System.out.println(pair.getKey());
+//				System.out.println(pair.getKey());
 				//inter[i] = "\"" + pair.getKey() + "\"";
 				//i++;
 				
@@ -176,7 +179,7 @@ class WebreportController {
 //				int a = i;
 				Map.Entry pair = (Map.Entry)it3.next();
 				int value = (int) pair.getValue();
-				System.out.println(pair.getKey());
+//				System.out.println(pair.getKey());
 				VarNames vntemp = new VarNames();
 				vntemp.name = pair.getKey();
 				vntemp.count = value; 
@@ -185,6 +188,8 @@ class WebreportController {
 			}
 			
 			
+			println className
+			results = executeCodeAnalizer(className)
 			
 			
 			[a:cla1,b:name,c:attr,d:inter,e:imple,largeClass:lc,methodlength:ml, varNames :vn]
@@ -192,7 +197,36 @@ class WebreportController {
 	}
 	
 	
-	
+	def private String[] executeCodeAnalizer(String className) {
+		def sout = new StringBuilder(), serr = new StringBuilder()
+		def pathClass = "javac  ./src/Codes/"+ className +" -d ./src/Classes"
+		def proc = pathClass.execute()
+		proc.consumeProcessOutput(sout, serr)
+		proc.waitForOrKill(2000)
+		println "out> $sout err> $serr"
+
+		def classes = []
+		def results = []
+		
+		def dir = new File("./src/Classes")
+		dir.eachFileRecurse (FileType.FILES) { file ->
+		  classes << file
+		}
+		
+		
+		classes.each {
+			def command = "java -jar ./lib/ckjm_ext.jar " + it.path.toString()
+			def proc1 = command.execute()
+			def sout1 = new StringBuilder(), serr1 = new StringBuilder()
+			proc1.consumeProcessOutput(sout1, serr1)
+			proc1.waitForOrKill(2000)
+			results << sout1
+//			println "Ouput: $sout1, Errors: $serr1"
+			
+		  }
+		
+		return results
+	}
    def report() {
 	   
 		

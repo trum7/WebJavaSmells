@@ -260,6 +260,20 @@
        	<div class="row features-content">
 
        		<div class="features-list block-1-3 block-s-1-2 block-tab-full group">
+			
+			 <div class="bgrid feature">
+
+    			   	<span class="icon"><i class="ion-earth"></i></span>
+
+    	            <div class="service-content">
+    	            	 <h3 class="h05">God Class </h3>
+
+    		            <p>Classes that have increased to such huge proportions that they are hard to work with.</p>
+
+    	            </div>
+
+    			   </div> <!-- /bgrid -->
+		
 
     	      	<div class="bgrid feature">
 
@@ -385,6 +399,36 @@
      		</div>
      	</div>
 
+		<div class="row process-content">
+        <div class="col-sm-10">
+      		<h3 class="h01">God Class</h3>
+          <div class="col-sm-12" align="center">
+            <table class="table table-hover table-bordered" id="table8">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Length</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <g:each in="${largeClass}" var="p">
+                  <tr>
+                    <g:if test="${p.length < 100 }">
+                      <td bgcolor="#70F98F">${p.name}</td>
+                      <td bgcolor="#70F98F">${p.length}</td>
+                    </g:if>
+                    <g:else>
+                      <td bgcolor="#F47171">${p.name}</td>
+                      <td bgcolor="#F47171">${p.length}</td>
+                    </g:else>
+                  </tr>
+                  </g:each>
+              </tbody>
+            </table>
+          </div>
+      	</div>
+     </div> <!-- /process-content -->
+     
      	<div class="row process-content">
         <div class="col-sm-10">
       		<h3 class="h01">Long Class</h3>
@@ -644,6 +688,7 @@
       $('#table5').dataTable( );
       $('#table6').dataTable( );
       $('#table7').dataTable( );
+      $('#table8').dataTable( );
 
 
   </script>

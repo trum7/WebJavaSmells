@@ -12,7 +12,7 @@ public class ClassInfo {
 	public int count;
 	public HashMap<String,Integer> attributes ;
 	public HashMap<String,Integer> primitiveAttributes ;
-	public HashMap<String,MethodInfo> methods ;
+	public HashMap<String ,MethodInfo> methods ;
 	public ArrayList<String> extendsClass;
 	public ArrayList<String> implementInterfaces;
 	public ArrayList<String> referencesClasses;
@@ -39,10 +39,5 @@ public class ClassInfo {
 				+ "\n\tIs data class= "+ isDataClass + "\n\tMessageChain="+ messageChain +"\n\tCount= " + count 
 				+", \n\textendsClass="+ extendsClass.toString() + ", \n\timplementsInterfaces = "+implementInterfaces.toString()
 				+", \n\treferencesClasses= " + referencesClasses.toString() ;
-	}
-
-	
-	
-
-	
+	}	
 }
