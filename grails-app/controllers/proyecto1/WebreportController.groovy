@@ -186,30 +186,35 @@ class WebreportController {
 			}
 			
 		
-//			def list = []
+			
+			  
+//			Sifunciona todo 
+//			def sout = new StringBuilder(), serr = new StringBuilder()
+//			def proc = "javac  ./src/Ejemplos/ExampleTest.java -d ./src/Classes".execute()
+//			proc.consumeProcessOutput(sout, serr)
+//			proc.waitForOrKill(2000)
+//			println "out> $sout err> $serr"
+//
+//			def classes = []
+//			def results = []
 //			
 //			def dir = new File("./src/Classes")
 //			dir.eachFileRecurse (FileType.FILES) { file ->
-//			  list << file
+//			  classes << file
 //			}
 //			
-//			list.each {
-//				println it.path
+//			
+//			classes.each {
+//				def command = "java -jar ./lib/ckjm_ext.jar " + it.path.toString()
+//				def proc1 = command.execute()
+//				def sout1 = new StringBuilder(), serr1 = new StringBuilder()
+//				proc1.consumeProcessOutput(sout1, serr1)
+//				proc1.waitForOrKill(2000)
+//				results << sout1
+//				println "Ouput: $sout1, Errors: $serr1"
+//				
 //			  }
-			  
-//			Sifunciona todo 
-			def sout = new StringBuilder(), serr = new StringBuilder()
-			def proc = "javac  ./src/Ejemplos/ExampleTest.java -d ./src/Classes".execute()
-			proc.consumeProcessOutput(sout, serr)
-			proc.waitForOrKill(2000)
-			println "out> $sout err> $serr"
-//			
-//			
-//			def proc1 = "java -jar ./lib/ckjm_ext.jar ./src/Ejemplos/ExampleTest.class ".execute()
-//			def sout1 = new StringBuilder(), serr1 = new StringBuilder()
-//			proc1.consumeProcessOutput(sout1, serr1)
-//			proc1.waitForOrKill(2000)
-//			println "Ouput: $sout1, Errors: $serr1"
+					
 			
 			
 			[a:cla1,b:name,c:attr,d:inter,e:imple,largeClass:lc,methodlength:ml, varNames :vn]

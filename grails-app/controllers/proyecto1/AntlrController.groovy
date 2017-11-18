@@ -24,14 +24,18 @@ class AntlrController {
 		try{
 
 			String input1 = params.code;
+			codeVisitor(input1);
 //			println input1;
 //			System.setIn(new FileInputStream(new File("src/input.txt")));
 			ANTLRInputStream input = new ANTLRInputStream(input1);
 			Java8Lexer lexer= new Java8Lexer(input);
+			
 			// Identificar al analizador léxico como fuente de tokens para el sintactico
 			CommonTokenStream tokens = new CommonTokenStream(lexer);
+			
 			// Crear el objeto correspondiente al analizador sintáctico que se alimenta apartir del buffer de tokens
 			Java8Parser parser = new Java8Parser(tokens);
+			
 			ParseTree tree = parser.compilationUnit(); // begin parsing at init rule
 			ClassAndInterVisitor<Object> firstLoader = new ClassAndInterVisitor<Object>();
 			firstLoader.visit(tree);
@@ -83,6 +87,41 @@ class AntlrController {
 
 		redirect (controller: "webreport", action: 'index')
 
+	}
+	
+	def private String createMainClass(String input1) {
+		def className = ""
+		return className
+	}
+	
+	def private String[] executeCodeAnalizer(String className) {
+		def sout = new StringBuilder(), serr = new StringBuilder()
+		def proc = "javac  ./src/Ejemplos/ExampleTest.java -d ./src/Classes".execute()
+		proc.consumeProcessOutput(sout, serr)
+		proc.waitForOrKill(2000)
+		println "out> $sout err> $serr"
+
+		def classes = []
+		def results = []
+		
+		def dir = new File("./src/Classes")
+		dir.eachFileRecurse (FileType.FILES) { file ->
+		  classes << file
+		}
+		
+		
+		classes.each {
+			def command = "java -jar ./lib/ckjm_ext.jar " + it.path.toString()
+			def proc1 = command.execute()
+			def sout1 = new StringBuilder(), serr1 = new StringBuilder()
+			proc1.consumeProcessOutput(sout1, serr1)
+			proc1.waitForOrKill(2000)
+			results << sout1
+			println "Ouput: $sout1, Errors: $serr1"
+			
+		  }
+		
+		return results
 	}
 
 	def private HashMap badName(){
