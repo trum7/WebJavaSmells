@@ -182,7 +182,7 @@
    		<div class="col-twelve with-bottom-line">
 
    			<h5>Team</h5>
-   			<h3>Programming Languages</h3>
+   			<h3>Stochastic Models and Simulation</h3>
    			<h1>Universidad Nacional de Colombia</h1>
 
    		</div>
