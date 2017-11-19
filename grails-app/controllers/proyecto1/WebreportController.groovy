@@ -188,7 +188,7 @@ class WebreportController {
 				
 			}
 			
-			
+			/* AQUI ESTAN LAS METRICAS estan en orden para el arbol es un ArrayList con ArrayLists */
 			println className
 			results = executeCodeAnalizer(className)
 			metrics = classMetrics(results)
