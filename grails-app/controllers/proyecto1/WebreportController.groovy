@@ -18,6 +18,7 @@ class WebreportController {
 		def String[] meth = new String[session.methods.size()];
 		def String[] imple = new String[4*session.classes.size()];
 		def String[] largeClass = new String[2*session.classes.size()+2*session.interfaces.size()];
+		def ArrayList metrics = new ArrayList();
 			int i = 0;
 			int y = 0;
 			int b = 0;
@@ -187,9 +188,14 @@ class WebreportController {
 				
 			}
 			
-			
+			/* AQUI ESTAN LAS METRICAS estan en orden para el arbol es un ArrayList con ArrayLists */
 			println className
 			results = executeCodeAnalizer(className)
+			metrics = classMetrics(results)
+			
+			for(int k = 0 ; k< metrics.size; k++) {
+				println metrics.get(k) 
+			}
 			
 			
 			[a:cla1,b:name,c:attr,d:inter,e:imple,largeClass:lc,methodlength:ml, varNames :vn]
@@ -227,6 +233,28 @@ class WebreportController {
 		
 		return results
 	}
+	
+	
+	def private ArrayList classMetrics( String[] result ) {
+		def ArrayList metrics = new ArrayList()
+		result.each{
+			def temMetric = it.split(System.getProperty("line.separator"))
+			def ArrayList clMetric = new ArrayList()
+			def correctMetrics = temMetric[0].split(" ")
+			
+			clMetric.add(correctMetrics[0])
+			clMetric.add(correctMetrics[1])
+			clMetric.add(correctMetrics[10])
+			clMetric.add(correctMetrics[4])
+			clMetric.add(correctMetrics[5])
+			clMetric.add(correctMetrics[15])
+			clMetric.add(correctMetrics[5])
+			metrics.add(clMetric)	
+		}
+		
+		return metrics 
+	}
+	
    def report() {
 	   
 		
