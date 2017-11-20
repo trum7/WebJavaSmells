@@ -188,7 +188,7 @@ class WebreportController {
 				
 			}
 			
-			/* AQUI ESTAN LAS METRICAS estan en orden para el arbol es un ArrayList con ArrayLists */
+			/* AQUI ESTAN LAS METRICAS estan en orden para el arbol . es un ArrayList con ArrayLists */
 			println className
 			results = executeCodeAnalizer(className)
 			metrics = classMetrics(results)
@@ -242,13 +242,13 @@ class WebreportController {
 			def ArrayList clMetric = new ArrayList()
 			def correctMetrics = temMetric[0].split(" ")
 			
-			clMetric.add(correctMetrics[0])
-			clMetric.add(correctMetrics[1])
-			clMetric.add(correctMetrics[10])
-			clMetric.add(correctMetrics[4])
-			clMetric.add(correctMetrics[5])
-			clMetric.add(correctMetrics[15])
-			clMetric.add(correctMetrics[5])
+			clMetric.add(correctMetrics[0]) // Nombre de las clase
+			clMetric.add(correctMetrics[1]) // WMC 
+			clMetric.add(correctMetrics[10]) // TCC
+			clMetric.add(correctMetrics[4]) // CBO
+			clMetric.add(correctMetrics[5]) // RFC
+			clMetric.add(correctMetrics[15]) // CAM
+			clMetric.add(correctMetrics[5]) //RFC 
 			metrics.add(clMetric)	
 		}
 		
