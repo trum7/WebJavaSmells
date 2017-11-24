@@ -407,7 +407,7 @@
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th>Length</th>
+                  <th>God Class</th>
                 </tr>
               </thead>
               <tbody>
