@@ -194,14 +194,14 @@ class WebreportController {
 			results = executeCodeAnalizer(className)
 			def ArrayList metrics = classMetrics(results)
 			reportGod = report(metrics)
-			for(int k = 0 ; k< metrics.size; k++) {
-				println "acacacaca22222"
-				println metrics.get(k)
-			}
-			for(int k = 0 ; k< reportGod.size; k++) {
-				println "acacacaca"
-				println reportGod.get(k).isGod.toString()
-			}
+//			for(int k = 0 ; k< metrics.size; k++) {
+//				println "acacacaca22222"
+//				println metrics.get(k)
+//			}
+//			for(int k = 0 ; k< reportGod.size; k++) {
+//				println "acacacaca"
+//				println reportGod.get(k).isGod.toString()
+//			}
 			
 			
 			[a:cla1,b:name,c:attr,d:inter,e:imple,largeClass:lc,methodlength:ml, varNames :vn, godclass:reportGod]
@@ -210,6 +210,8 @@ class WebreportController {
 	
 	
 	def private String[] executeCodeAnalizer(String className) {
+		def make = "mkdir ./src/Classes"
+		make.execute()
 		def sout = new StringBuilder(), serr = new StringBuilder()
 		def pathClass = "javac  ./src/Codes/"+ className +" -d ./src/Classes"
 		def proc = pathClass.execute()
@@ -237,6 +239,8 @@ class WebreportController {
 			
 		  }
 		
+		 def delete = "rm -r ./src/Classes" 
+		 delete.execute()
 		return results
 	}
 	

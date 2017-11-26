@@ -1,8 +1,7 @@
 import java.util.*;
 import java.lang.Math;
 
-public class ClaseDios
-{
+public class ClaseDios{
   int x;
   Suma2 r;
   Suma4 r1;

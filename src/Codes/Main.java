@@ -496,19 +496,6 @@ public class Main{
 			this.instances.put(2, "long");
 			this.instances.put(3, "string");
 		}
-		
-
-//		 public String key(String value){
-//
-//			 for (Entry<String, String> entry : symbols.entrySet()) {
-//
-//				 if (value.equals(entry.getValue())) {
-//					 return entry.getKey();
-//			       }
-//			    }
-//			return null;
-//		 }
-
 	}
 
 }
