@@ -90,7 +90,7 @@ class AntlrController {
 		def tempClass = ""
 		def className = ""
 		for (s in divided) {
-			if (s.contains('class')) {
+			if (s.contains('class') ) {
 				tempClass = s.split('class')[1].trim().split(" ")
 				className = tempClass[0].replace("{","").replace("<T>","") +".java"
 				break
