@@ -1,6 +1,5 @@
 //Extiende
 // implements
-// instancia
 
 public static class Hello extends Saludo  {
 
