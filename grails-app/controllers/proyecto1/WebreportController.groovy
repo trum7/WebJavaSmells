@@ -18,7 +18,8 @@ class WebreportController {
 		def String[] meth = new String[session.methods.size()];
 		def String[] imple = new String[4*session.classes.size()];
 		def String[] largeClass = new String[2*session.classes.size()+2*session.interfaces.size()];
-		def ArrayList metrics = new ArrayList();
+//		def ArrayList metrics = new ArrayList();
+		def ArrayList reportGod = new ArrayList();
 			int i = 0;
 			int y = 0;
 			int b = 0;
@@ -191,19 +192,26 @@ class WebreportController {
 			/* AQUI ESTAN LAS METRICAS estan en orden para el arbol . es un ArrayList con ArrayLists */
 			println className
 			results = executeCodeAnalizer(className)
-			metrics = classMetrics(results)
+			def ArrayList metrics = classMetrics(results)
+			reportGod = report(metrics)
+//			for(int k = 0 ; k< metrics.size; k++) {
+//				println "acacacaca22222"
+//				println metrics.get(k)
+//			}
+//			for(int k = 0 ; k< reportGod.size; k++) {
+//				println "acacacaca"
+//				println reportGod.get(k).isGod.toString()
+//			}
 			
-			for(int k = 0 ; k< metrics.size; k++) {
-				println metrics.get(k) 
-			}
 			
-			
-			[a:cla1,b:name,c:attr,d:inter,e:imple,largeClass:lc,methodlength:ml, varNames :vn]
+			[a:cla1,b:name,c:attr,d:inter,e:imple,largeClass:lc,methodlength:ml, varNames :vn, godclass:reportGod]
 			
 	}
 	
 	
 	def private String[] executeCodeAnalizer(String className) {
+		def make = "mkdir ./src/Classes"
+		make.execute()
 		def sout = new StringBuilder(), serr = new StringBuilder()
 		def pathClass = "javac  ./src/Codes/"+ className +" -d ./src/Classes"
 		def proc = pathClass.execute()
@@ -231,6 +239,8 @@ class WebreportController {
 			
 		  }
 		
+		 def delete = "rm -r ./src/Classes" 
+		 delete.execute()
 		return results
 	}
 	
@@ -255,12 +265,36 @@ class WebreportController {
 		return metrics 
 	}
 	
-   def report() {
+   def private ArrayList report( ArrayList metrics ){
 	   
-		
-	}
-   
-   
+	    def godClasses = new ArrayList()
+	    metrics.each{
+			def godClass = new GodClass( it.get( 0 ) )
+			// WMC
+			if( Integer.parseInt(it.get( 1 )) > 45 ){
+				// TCC
+				if( Float.parseFloat(it.get( 2 )) <= 0.36 ){
+					// CBO
+					if( Integer.parseInt(it.get( 3 )) > 1 ){
+						// RFC
+						if( Integer.parseInt(it.get( 4 )) <= 143 ){
+							// CAM
+							if( Float.parseFloat(it.get( 5 )) <= 0.087 ){
+								//RFC
+								if( Integer.parseInt(it.get( 6 ))  <= 83 )
+									godClass.isGod = "si"
+							}else{
+								godClass.isGod = "si"
+							}
+						}else{
+							godClass.isGod = "si"
+						}
+					}	
+				}
+			}
+			godClasses.add( godClass )
+		}
+	
+ 	return  godClasses ;
+   }
 }
-
-

@@ -407,19 +407,19 @@
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th>Length</th>
+                  <th>God Class</th>
                 </tr>
               </thead>
               <tbody>
-                  <g:each in="${largeClass}" var="p">
+                  <g:each in="${godclass}" var="p">
                   <tr>
-                    <g:if test="${p.length < 100 }">
+                    <g:if test="${p.isGod == "no" }">
                       <td bgcolor="#70F98F">${p.name}</td>
-                      <td bgcolor="#70F98F">${p.length}</td>
+                      <td bgcolor="#70F98F">${p.isGod}</td>
                     </g:if>
                     <g:else>
                       <td bgcolor="#F47171">${p.name}</td>
-                      <td bgcolor="#F47171">${p.length}</td>
+                      <td bgcolor="#F47171">${p.isGod}</td>
                     </g:else>
                   </tr>
                   </g:each>
